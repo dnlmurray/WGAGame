@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Dev\Unreal Projects\WGAGame" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
@@ -15,8 +16,11 @@
         <e p="WGAGame.vcxproj" t="IncludeRecursive" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="README.md" t="Include" />
       <e p="Source" t="Include">
         <e p="WGAGame" t="Include">
+          <e p="MeleeWeapon.cpp" t="Include" />
+          <e p="MeleeWeapon.h" t="Include" />
           <e p="WGAGame.Build.cs" t="Include" />
           <e p="WGAGame.cpp" t="Include" />
           <e p="WGAGame.h" t="Include" />
