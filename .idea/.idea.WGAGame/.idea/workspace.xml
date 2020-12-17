@@ -7,6 +7,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08c456c1-b102-4b38-ba11-9f226853645a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +38,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Config/DefaultEngine.ini" />
-      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" />
       <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ldhQZVlirnuW0diqRSMavnnaIK" />
@@ -186,6 +188,7 @@
       <workItem from="1608138902413" duration="13875000" />
       <workItem from="1608215079813" duration="388000" />
       <workItem from="1608215881070" duration="2772000" />
+      <workItem from="1608229124482" duration="5021000" />
     </task>
     <servers />
   </component>

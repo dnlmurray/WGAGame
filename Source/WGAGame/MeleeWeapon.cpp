@@ -54,10 +54,13 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 		if (WorldReference->LineTraceSingleByChannel(HitResult, TraceBegin, TraceEnd, ECC_Weapon, CollisionQueryParams))
 		{
 			if(HitResult.Actor->CanBeDamaged())
+			{
 				HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
+				if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, HitResult.Actor->GetName());
+			}
 		}
 		
-		if (bDebugModeEnabled) DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Orange, false, 20.0f, 0, 3);
+		if (bDebugModeEnabled) DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, false, 10.0f, 0, 1);
 		
 		CurrentTransform = NewTransform;
 	}
