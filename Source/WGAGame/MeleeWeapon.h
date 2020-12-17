@@ -48,15 +48,15 @@ protected:
 	virtual void BeginPlay() override;
 
 	// Call it every frame in the Tick function
-	UFUNCTION(BlueprintCallable)
-	void ExecuteWeaponTrace();
+	//UFUNCTION(BlueprintCallable)
+	//void ExecuteWeaponTrace();
 
 	// The amount of damage this weapon applies to an object
 	UPROPERTY(BlueprintReadWrite)
 	float BaseDamage;
 
 	
-private:	
+private:
 	// An array of nodes which are used to detect weapon collision.
 	// (in local coordinates)
 	TArray<FVector> Nodes;

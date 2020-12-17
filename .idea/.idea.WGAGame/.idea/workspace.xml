@@ -6,14 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08c456c1-b102-4b38-ba11-9f226853645a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WGAGame.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/WGAGame.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor.modules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +39,8 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Config/DefaultEngine.ini" />
-      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" />
       <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1ldhQZVlirnuW0diqRSMavnnaIK" />
@@ -191,6 +187,8 @@
       <workItem from="1608128743028" duration="4058000" />
       <workItem from="1608137541568" duration="1066000" />
       <workItem from="1608138902413" duration="13875000" />
+      <workItem from="1608215079813" duration="388000" />
+      <workItem from="1608215881070" duration="2156000" />
     </task>
     <servers />
   </component>

@@ -31,11 +31,10 @@ void AMeleeWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-}
+/*}
 
 void AMeleeWeapon::ExecuteWeaponTrace()
-{
-	GEngine->AddOnScreenDebugMessage(1, 15.0f, FColor::Red, TEXT("Weapon trace executed"));
+{*/
 
 	if(!bExecutionEnabled) return;
 	
@@ -44,8 +43,9 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 	FVector TraceBegin, TraceEnd;
 
 	FHitResult HitResult;
-	// Replace later
-	FDamageEvent MyDamage;
+	
+	// Replace this event later
+	FDamageEvent SwordDamage;
 	
 	for (FVector& Node : Nodes)
 	{
@@ -54,10 +54,9 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 		if (WorldReference->LineTraceSingleByChannel(HitResult, TraceBegin, TraceEnd, ECC_Weapon, CollisionQueryParams))
 		{
 			if(HitResult.Actor->CanBeDamaged())
-				HitResult.Actor->TakeDamage(BaseDamage, MyDamage, nullptr, this);
+				HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
 		}
 		
-		if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, TEXT("Executed!" + Node.ToString()));
 		if (bDebugModeEnabled) DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Orange, false, 20.0f, 0, 3);
 		
 		CurrentTransform = NewTransform;
