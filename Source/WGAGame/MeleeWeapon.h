@@ -53,7 +53,7 @@ protected:
 
 	// The amount of damage this weapon applies to an object
 	UPROPERTY(BlueprintReadWrite)
-	float BaseDamage;
+	float BaseDamage = 50;
 
 	
 private:

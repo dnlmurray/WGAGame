@@ -53,10 +53,12 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 		TraceEnd = NewTransform.TransformPosition(Node);
 		if (WorldReference->LineTraceSingleByChannel(HitResult, TraceBegin, TraceEnd, ECC_Weapon, CollisionQueryParams))
 		{
-			if(HitResult.Actor->CanBeDamaged())
+			if(HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
 			{
-				HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
-				if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, HitResult.Actor->GetName());
+				// if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, HitResult.Actor->GetName());
+				if (HitResult.Actor != this) {
+					HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
+				}
 			}
 		}
 		
