@@ -15,8 +15,10 @@ class WGAGAME_API AAbilitySystemState : public APlayerState
 	GENERATED_BODY()
 
 public:
-
+	virtual void Tick(float DeltaTime) override;
+	
 private:
-	 
+	TMap<AActor*, float> SpawnedActors;
+	
 	
 };
