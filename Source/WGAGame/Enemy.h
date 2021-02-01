@@ -3,6 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+
+#include "MeleeWeapon.h"
+#include "SpawnManager.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"
 
@@ -27,14 +31,23 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	
+	UPROPERTY(BlueprintReadOnly)
+	float MaxHealth;
+	
 	UPROPERTY(BlueprintReadWrite)
 	float Health;
 
-	UPROPERTY(BlueprintReadOnly)
-	float MaxHealth;
+	void SetSpawnManager(ASpawnManager* SpawnManager);
 
 private:
-	float DamageHealthDecrease = 50;	
+	void OnEnemyDeath();
+
+public:
+	UPROPERTY(BlueprintReadWrite)
+	AMeleeWeapon* EnemyWeapon;
+	
+private:
+	ASpawnManager* SpawnManager;
 };
 

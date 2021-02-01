@@ -6,9 +6,10 @@
 
 // Sets default values
 AMeleeWeapon::AMeleeWeapon()
-	: Nodes()
+	: WeaponOwner(nullptr)
 	, bExecutionEnabled(false)
 	, bDebugModeEnabled(false)
+	, LastActor(nullptr)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -55,9 +56,9 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 		{
 			if(HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
 			{
-				// if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, HitResult.Actor->GetName());
-				if (HitResult.Actor != this) {
+				if (HitResult.Actor != this && LastActor != HitResult.Actor.Get()) {
 					HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
+					LastActor = HitResult.Actor.Get();
 				}
 			}
 		}
@@ -77,6 +78,7 @@ void AMeleeWeapon::EnableDamageApplying()
 void AMeleeWeapon::DisableDamageApplying()
 {
 	bExecutionEnabled = false;
+	LastActor = nullptr;
 }
 
 void AMeleeWeapon::SetNodes(const FVector& StartLocation, const FVector& EndLocation, int32 NumberOfNodes)

@@ -3,3 +3,7 @@
 
 #include "WGAGameGameModeBase.h"
 
+void AWGAGameGameModeBase::OnPlayerDeath()
+{
+	ResetLevel();
+}

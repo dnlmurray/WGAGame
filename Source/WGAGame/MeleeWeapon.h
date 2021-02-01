@@ -55,6 +55,9 @@ protected:
 	UPROPERTY(BlueprintReadWrite)
 	float BaseDamage = 50;
 
+public:
+	UPROPERTY(BlueprintReadWrite)
+	AActor* WeaponOwner;
 	
 private:
 	// An array of nodes which are used to detect weapon collision.
@@ -75,4 +78,7 @@ private:
 	// If the flag is set then the weapon enters debug mode:
 	// TODO: debug mode description
 	uint8 bDebugModeEnabled:1;
+
+	// Last actor hit by this weapon
+	AActor* LastActor;
 };

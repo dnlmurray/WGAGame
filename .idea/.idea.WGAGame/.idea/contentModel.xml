@@ -5,7 +5,7 @@
     <e p="C:\Users\Alex\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WGAGame.828145302.00" t="ExcludeRecursive" />
     <e p="D:\Games\UnrealEngineProjects\WGAGame" t="IncludeFlat">
       <e p=".gitignore" t="Include" />
-      <e p="Build.zip" t="Include" />
+      <e p="Build.rar" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
@@ -137,7 +137,7 @@
                           <e p="InternScheduler.cpp" t="Include" />
                           <e p="InternScheduler.h" t="Include" />
                         </e>
-                        <e p="Protocol" t="Include">
+                        <e p="protocol" t="Include">
                           <e p="Buffer.cpp" t="Include" />
                           <e p="Buffer.h" t="Include" />
                           <e p="Identities.cpp" t="Include" />
@@ -149,7 +149,7 @@
                           <e p="RdId.cpp" t="Include" />
                           <e p="RdId.h" t="Include" />
                         </e>
-                        <e p="Scheduler" t="Include">
+                        <e p="scheduler" t="Include">
                           <e p="base" t="Include">
                             <e p="IScheduler.cpp" t="Include" />
                             <e p="IScheduler.h" t="Include" />
@@ -545,8 +545,12 @@
         <e p="WGAGame" t="Include">
           <e p="Enemy.cpp" t="Include" />
           <e p="Enemy.h" t="Include" />
+          <e p="MainCharacter.cpp" t="Include" />
+          <e p="MainCharacter.h" t="Include" />
           <e p="MeleeWeapon.cpp" t="Include" />
           <e p="MeleeWeapon.h" t="Include" />
+          <e p="SpawnManager.cpp" t="Include" />
+          <e p="SpawnManager.h" t="Include" />
           <e p="WGAGame.Build.cs" t="Include" />
           <e p="WGAGame.cpp" t="Include" />
           <e p="WGAGame.h" t="Include" />
@@ -2531,7 +2535,7 @@
                     <e p="InternScheduler.cpp" t="Include" />
                     <e p="InternScheduler.h" t="Include" />
                   </e>
-                  <e p="Protocol" t="Include">
+                  <e p="protocol" t="Include">
                     <e p="Buffer.cpp" t="Include" />
                     <e p="Buffer.h" t="Include" />
                     <e p="Identities.cpp" t="Include" />
@@ -2543,7 +2547,7 @@
                     <e p="RdId.cpp" t="Include" />
                     <e p="RdId.h" t="Include" />
                   </e>
-                  <e p="Scheduler" t="Include">
+                  <e p="scheduler" t="Include">
                     <e p="base" t="Include">
                       <e p="IScheduler.cpp" t="Include" />
                       <e p="IScheduler.h" t="Include" />
@@ -5347,7 +5351,7 @@
           <e p="BackChannel.Build.cs" t="Include" />
           <e p="Private" t="Include">
             <e p="BackChannelCommon.h" t="Include" />
-            <e p="Protocol" t="Include">
+            <e p="protocol" t="Include">
               <e p="BackChannelOSCBundle.cpp" t="Include" />
               <e p="BackChannelOSCConnection.cpp" t="Include" />
               <e p="BackChannelOSCDispatch.cpp" t="Include" />
@@ -5362,7 +5366,7 @@
               <e p="TestBackChannelTransport.cpp" t="Include" />
             </e>
           </e>
-          <e p="Protocol" t="Include">
+          <e p="protocol" t="Include">
             <e p="OSC" t="Include">
               <e p="BackChannelOSC.h" t="Include" />
               <e p="BackChannelOSCBundle.h" t="Include" />
@@ -11226,7 +11230,7 @@
               <e p="GenericImgMediaReader.h" t="Include" />
               <e p="IImgMediaReader.h" t="Include" />
             </e>
-            <e p="Scheduler" t="Include">
+            <e p="scheduler" t="Include">
               <e p="IImgMediaScheduler.h" t="Include" />
               <e p="ImgMediaScheduler.cpp" t="Include" />
               <e p="ImgMediaScheduler.h" t="Include" />
@@ -15927,7 +15931,7 @@
               <e p="DisplayClusterSocketOps.h" t="Include" />
               <e p="DisplayClusterTcpListener.cpp" t="Include" />
               <e p="DisplayClusterTcpListener.h" t="Include" />
-              <e p="Protocol" t="Include">
+              <e p="protocol" t="Include">
                 <e p="IPDisplayClusterClusterEventsProtocol.h" t="Include" />
                 <e p="IPDisplayClusterClusterSyncProtocol.h" t="Include" />
                 <e p="IPDisplayClusterSwapSyncProtocol.h" t="Include" />

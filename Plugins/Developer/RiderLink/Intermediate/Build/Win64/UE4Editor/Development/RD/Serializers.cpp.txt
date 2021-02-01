@@ -1,9 +1,9 @@
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\Serializers.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/RdId.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Buffer.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/DateTime.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\Serializers.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/RdId.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Buffer.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/DateTime.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\functional
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\yvals_core.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vcruntime.h
@@ -82,15 +82,15 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\iosfwd
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cctype
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_util.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\erase_if.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\gen_util.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/allocator.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_util.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\erase_if.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\gen_util.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/allocator.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\memory
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\overloaded.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\shared_function.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/to_string.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\overloaded.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\shared_function.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/to_string.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\thread
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\chrono
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ratio
@@ -152,87 +152,87 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xlocmon
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xloctime
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\codecvt
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\deque
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/wrapper.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_traits.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/Void.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/wrapper.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_traits.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/Void.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\unordered_map
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xhash
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\list
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xbit_ops.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\iostream
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/list.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\hashing.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ISerializable.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Identities.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IUnknownInstance.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/RdAny.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\DefaultAbstractDeclaration.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/unordered_map.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/list.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\hashing.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ISerializable.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Identities.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IUnknownInstance.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/RdAny.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\DefaultAbstractDeclaration.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/unordered_map.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\unordered_set
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/AbstractPolymorphic.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Polymorphic.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdReactiveBase.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdBindableBase.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdBindable.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdDynamic.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RName.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/Lifetime.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/AbstractPolymorphic.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Polymorphic.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdReactiveBase.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdBindableBase.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdBindable.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdDynamic.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RName.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/Lifetime.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\map
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xtree
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IProtocol.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IWire.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/base/interfaces.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IRdReactive.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdWireable.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/Property.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IProperty.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalX.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\IPropertyBase.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/SequentialLifetimes.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeDefinition.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\guards.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IProtocol.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IWire.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/base/interfaces.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IRdReactive.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdWireable.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/Property.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IProperty.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalX.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\IPropertyBase.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/SequentialLifetimes.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeDefinition.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\guards.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\regex
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern/InternRoot.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternScheduler.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedAnySerializer.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern/InternRoot.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternScheduler.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedAnySerializer.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
