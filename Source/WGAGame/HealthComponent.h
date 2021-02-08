@@ -37,6 +37,8 @@ protected:
 private:
 	float HealthValue;
 	float RegenerationSpeed;
+
+	const float HealthMaxValue = 100.0f;
 	
 	uint8 bRegenerationIsEnabled:1;
 };

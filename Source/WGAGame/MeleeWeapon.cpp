@@ -30,11 +30,6 @@ void AMeleeWeapon::BeginPlay()
 void AMeleeWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
-/*}
-
-void AMeleeWeapon::ExecuteWeaponTrace()
-{*/
 
 	if(!bExecutionEnabled) return;
 	
@@ -56,7 +51,8 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 			if(HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
 			{
 				// if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, HitResult.Actor->GetName());
-				if (HitResult.Actor != this) {
+				if (HitResult.Actor != this)
+				{
 					HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
 				}
 			}

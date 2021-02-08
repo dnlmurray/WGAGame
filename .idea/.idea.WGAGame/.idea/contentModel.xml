@@ -540,10 +540,14 @@
       <e p="README.md" t="Include" />
       <e p="Source" t="Include">
         <e p="WGAGame" t="Include">
-          <e p="AbilitySystemState.cpp" t="Include" />
-          <e p="AbilitySystemState.h" t="Include" />
+          <e p="AbilitiesConfig.cpp" t="Include" />
+          <e p="AbilitiesConfig.h" t="Include" />
           <e p="Enemy.cpp" t="Include" />
           <e p="Enemy.h" t="Include" />
+          <e p="Exorcism.cpp" t="Include" />
+          <e p="Exorcism.h" t="Include" />
+          <e p="FaithComponent.cpp" t="Include" />
+          <e p="FaithComponent.h" t="Include" />
           <e p="HealthComponent.cpp" t="Include" />
           <e p="HealthComponent.h" t="Include" />
           <e p="MeleeWeapon.cpp" t="Include" />
@@ -551,8 +555,8 @@
           <e p="WGAGame.Build.cs" t="Include" />
           <e p="WGAGame.cpp" t="Include" />
           <e p="WGAGame.h" t="Include" />
-          <e p="WGAGameGameModeBase.cpp" t="Include" />
-          <e p="WGAGameGameModeBase.h" t="Include" />
+          <e p="WhiteBarrier.cpp" t="Include" />
+          <e p="WhiteBarrier.h" t="Include" />
         </e>
         <e p="WGAGame.Target.cs" t="Include" />
         <e p="WGAGameEditor.Target.cs" t="Include" />

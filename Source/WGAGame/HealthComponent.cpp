@@ -20,7 +20,7 @@ void UHealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	HealthValue = HealthMaxValue;
 	
 }
 
@@ -37,11 +37,10 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 void UHealthComponent::EnableRegeneration()
 {
-	bRegenerationIsEnabled = (!bRegenerationIsEnabled) ? true : false;
+	bRegenerationIsEnabled = true;
 }
 
 void UHealthComponent::ApplyInflictedDamage(float Damage)
 {
-	float Delta = HealthValue - Damage;
-	HealthValue = (Delta > 0) ? Delta : 0.0f;
+	HealthValue = (Damage <= HealthValue) ? HealthValue - Damage : 0.0f;
 }
