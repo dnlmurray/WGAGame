@@ -3,7 +3,10 @@
 
 #include "WGAGameGameModeBase.h"
 
-void AWGAGameGameModeBase::OnPlayerDeath()
+#include "Kismet/GameplayStatics.h"
+
+void AWGAGameGameModeBase::OnPlayerDeath() const
 {
-	ResetLevel();
+	const FString CurrentLevelName = GetWorld()->GetMapName();
+	UGameplayStatics::OpenLevel(GetWorld(), *CurrentLevelName);
 }

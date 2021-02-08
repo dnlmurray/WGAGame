@@ -48,7 +48,7 @@ void ASpawnManager::Tick(float DeltaTime)
 	if (CurrentWaveNumber < WavesNumber && CurrentEnemyNumber == 0 && IsActivated)
 	{
 		SpawnWave();
-		WavesNumber ++;
+		CurrentWaveNumber ++;
 	} else if (CurrentWaveNumber >= WavesNumber)
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));

@@ -17,5 +17,5 @@ class WGAGAME_API AWGAGameGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
-	void OnPlayerDeath();
+	void OnPlayerDeath() const;
 };

@@ -5,7 +5,6 @@
     <e p="C:\Users\Alex\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_WGAGame.828145302.00" t="ExcludeRecursive" />
     <e p="D:\Games\UnrealEngineProjects\WGAGame" t="IncludeFlat">
       <e p=".gitignore" t="Include" />
-      <e p="Build.rar" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEngine.ini" t="Include" />
