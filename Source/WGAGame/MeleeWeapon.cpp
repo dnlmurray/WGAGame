@@ -8,7 +8,6 @@
 AMeleeWeapon::AMeleeWeapon()
 	: WeaponOwner(nullptr)
 	, bExecutionEnabled(false)
-	, bDebugModeEnabled(false)
 	, LastActor(nullptr)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -32,12 +31,7 @@ void AMeleeWeapon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	
-/*}
-
-void AMeleeWeapon::ExecuteWeaponTrace()
-{*/
-
-	if(!bExecutionEnabled) return;
+	if(!bExecutionEnabled || !ConfigurationData) return;
 	
 	UWorld* WorldReference = GetWorld();
 	FTransform NewTransform = RootComponent->GetComponentTransform();
@@ -48,7 +42,7 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 	// Replace this event later
 	FDamageEvent SwordDamage;
 	
-	for (FVector& Node : Nodes)
+	for (FVector& Node : Nodes)	
 	{
 		TraceBegin = CurrentTransform.TransformPosition(Node);
 		TraceEnd = NewTransform.TransformPosition(Node);
@@ -56,14 +50,15 @@ void AMeleeWeapon::ExecuteWeaponTrace()
 		{
 			if(HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
 			{
-				if (HitResult.Actor != this && LastActor != HitResult.Actor.Get()) {
-					HitResult.Actor->TakeDamage(BaseDamage, SwordDamage, nullptr, this);
+				if (HitResult.Actor != this && HitResult.Actor != LastActor) 
+				{
+					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage, SwordDamage, nullptr, this);
 					LastActor = HitResult.Actor.Get();
 				}
 			}
 		}
 		
-		if (bDebugModeEnabled) DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, false, 10.0f, 0, 1);
+		if (ConfigurationData->WeaponAttackConfiguration.Debug) DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, true, 10.0f, 0, 1);
 		
 		CurrentTransform = NewTransform;
 	}
@@ -94,16 +89,8 @@ void AMeleeWeapon::SetNodes(const FVector& StartLocation, const FVector& EndLoca
 	{
 		Nodes[Count] = UnitVector * (Step * Count);
 		
-		if (bDebugModeEnabled) GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, Nodes[Count].ToString());
+		
+	//  if (ConfigurationData->WeaponAttackConfiguration.Debug) 
+	//		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Orange, Nodes[Count].ToString());
 	}
-}
-
-void AMeleeWeapon::EnableDebugMode()
-{
-	bDebugModeEnabled = true;
-}
-
-void AMeleeWeapon::DisableDebugMode()
-{
-	bDebugModeEnabled = false;
 }

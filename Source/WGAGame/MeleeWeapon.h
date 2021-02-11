@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "AbilitiesConfig.h"
 #include "MeleeWeapon.generated.h"
 
 // Make sure this redefenition matches the corresponding one in the DefaultEngine.ini file
@@ -27,10 +28,10 @@ public:
 	void DisableDamageApplying();
 
 	UFUNCTION(BlueprintCallable)
-	void EnableDebugMode();
-
-	UFUNCTION(BlueprintCallable)
-	void DisableDebugMode();
+    void Initialize(UAbilitiesConfig* Config)
+	{
+		ConfigurationData = Config;
+	}
 
 	// Creates nodes on the line between StartLocation and EndLocation
 	UFUNCTION(BlueprintCallable)
@@ -39,6 +40,9 @@ public:
 	// Visual representation
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* WeaponMesh;
+
+	UPROPERTY(BlueprintReadWrite)
+	AActor* WeaponOwner;
 	
 protected:
 	// Overrided Tick funtion, isn't really used as is is just a base class
@@ -46,18 +50,6 @@ protected:
 	
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
-	// Call it every frame in the Tick function
-	//UFUNCTION(BlueprintCallable)
-	//void ExecuteWeaponTrace();
-
-	// The amount of damage this weapon applies to an object
-	UPROPERTY(BlueprintReadWrite)
-	float BaseDamage = 50;
-
-public:
-	UPROPERTY(BlueprintReadWrite)
-	AActor* WeaponOwner;
 	
 private:
 	// An array of nodes which are used to detect weapon collision.
@@ -68,17 +60,16 @@ private:
 	// weapon position
 	FTransform CurrentTransform;
 
+	// Last actor hit by this weapon
+	AActor* LastActor;
+	
+	// General configuration
+	UAbilitiesConfig* ConfigurationData;
+
 	// Property structure for the line trace function
 	FCollisionQueryParams CollisionQueryParams;
 
 	// If the flag is set then the weapon starts detecting collision and
 	// applying damage to anything it hits
 	uint8 bExecutionEnabled:1;
-
-	// If the flag is set then the weapon enters debug mode:
-	// TODO: debug mode description
-	uint8 bDebugModeEnabled:1;
-
-	// Last actor hit by this weapon
-	AActor* LastActor;
 };
