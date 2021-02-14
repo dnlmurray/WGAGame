@@ -18,6 +18,12 @@ public:
 	AMainCharacter();
 
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override final;
+
+	UFUNCTION()
+    void OnActionStateChange(bool IsAction);
+
+	UFUNCTION()
+	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 	
 protected:
 	// Called when the game starts or when spawned

@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f1ddee-95c4-4878-879c-6905fece6f98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/AbilitiesConfig.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/AbilitiesConfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/FaithComponent.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/FaithComponent.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/WhiteBarrier.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/WGAGame/WhiteBarrier.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/riderModule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WGAGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Characters/Main_Character/BP/BP_MainCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Main_Character/BP/BP_MainCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Enemy/BP_Enemy.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Enemy/BP_Enemy.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Maps/Level1.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Level1.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/MainMenu.umap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RD.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RD.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderBlueprintExtension.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderBlueprintExtension.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderGameControlExtension.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Binaries/Win64/UE4Editor-RiderGameControlExtension.pdb" afterDir="false" />
@@ -164,8 +157,11 @@
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.exp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.lib.response" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.lib.response" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.suppressed.exp" beforeDir="false" afterPath="$PROJECT_DIR$/Plugins/Developer/RiderLink/Intermediate/Build/Win64/UE4Editor/Development/RiderLoggingExtension/UE4Editor-RiderLoggingExtension.suppressed.exp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MainCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MainCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/SpawnManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/SpawnManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/WGAGame/SpawnManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/WGAGame/SpawnManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,13 +172,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../UnrealEngine4/UE_4.25/Engine/Source/Runtime/Core/Public/UObject/ScriptDelegates.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" />
       <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.h" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/SpawnManager.cpp" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/MainCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/WGAGame/SpawnManager.h" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oIwGPe2YKDHf0UrDBRCVrAYzJF" />
@@ -192,7 +193,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35012594" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -318,6 +319,8 @@
       <workItem from="1612987609656" duration="622000" />
       <workItem from="1613034868018" duration="1446000" />
       <workItem from="1613037980287" duration="6241000" />
+      <workItem from="1613248861400" duration="340000" />
+      <workItem from="1613250089722" duration="12200000" />
     </task>
     <servers />
   </component>
@@ -342,9 +345,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Source/WGAGame/MeleeWeapon.cpp</url>
-          <line>52</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp</url>
+          <line>3</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp</url>
+          <line>30</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Source/WGAGame/MainCharacter.cpp</url>
+          <line>37</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
