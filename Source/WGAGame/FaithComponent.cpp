@@ -17,7 +17,7 @@ void UFaithComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FaithValue = FaithMaxValue;
+	//FaithValue = FaithMaxValue;
 }
 
 

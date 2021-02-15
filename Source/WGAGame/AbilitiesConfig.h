@@ -26,9 +26,19 @@ struct FWeaponAttackConfiguration
 	GENERATED_USTRUCT_BODY()
 	
 	FWeaponAttackConfiguration() { }
-	
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Damage;
+	
+	// Nodes to track: (for most cases x and y are equal to 0)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FVector Start;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FVector End;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	uint8 NumberOfNodes;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool Debug;

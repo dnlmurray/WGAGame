@@ -540,7 +540,6 @@
       <e p="README.md" t="Include" />
       <e p="Source" t="Include">
         <e p="WGAGame" t="Include">
-          <e p="AbilitiesConfig.cpp" t="Include" />
           <e p="AbilitiesConfig.h" t="Include" />
           <e p="Enemy.cpp" t="Include" />
           <e p="Enemy.h" t="Include" />
@@ -552,6 +551,8 @@
           <e p="MeleeWeapon.h" t="Include" />
           <e p="SpawnManager.cpp" t="Include" />
           <e p="SpawnManager.h" t="Include" />
+          <e p="Weapon.cpp" t="Include" />
+          <e p="Weapon.h" t="Include" />
           <e p="WGAGame.Build.cs" t="Include" />
           <e p="WGAGame.cpp" t="Include" />
           <e p="WGAGame.h" t="Include" />

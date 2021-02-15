@@ -47,7 +47,7 @@ void UWhiteBarrier::Place()
 		          FVector(10.0f, 10.0f, 0.025f));
 	
 	WhiteBarrierObjectRef
-		= GetWorld()->SpawnActor<AWhiteBarrierVisual>(WhiteBarrierObject, Transform, SpawnParams);;
+		= GetWorld()->SpawnActor<AWhiteBarrierVisual>(WhiteBarrierObject, Transform, SpawnParams);
 }
 
 void UWhiteBarrier::Remove()

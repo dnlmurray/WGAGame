@@ -38,9 +38,7 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-private:
-	const float FaithMaxValue = 100.0f;
-	
+private:	
 	float FaithValue;
 	float FaithDecreasingSpeed;
 

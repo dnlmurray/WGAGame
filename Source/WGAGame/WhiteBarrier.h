@@ -42,7 +42,7 @@ public:
     void Initialize(UAbilitiesConfig* Config)
 	{
 		ConfigurationData = Config;
-		Owner = (ACharacter*)GetOwner();
+		Owner = Cast<ACharacter>(GetOwner());
 	}
 	
 private:
