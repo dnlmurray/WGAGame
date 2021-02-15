@@ -2,6 +2,7 @@
 
 
 #include "MainCharacter.h"
+#include "SpawnManager.h"
 
 #include <cassert>
 
@@ -19,8 +20,25 @@ AMainCharacter::AMainCharacter()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-
+	OnActorBeginOverlap.AddDynamic(this, &AMainCharacter::OnBeginOverlap);
 }
+
+void AMainCharacter::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
+{
+	
+	if (OtherActor->GetClass()->IsChildOf(ASpawnManager::StaticClass()))
+	{
+		ASpawnManager* SpawnManager = static_cast<ASpawnManager*>(OtherActor);
+		SpawnManager->StateNotifier.AddDynamic(this, &AMainCharacter::OnActionStateChange);
+	}
+}
+
+void AMainCharacter::OnActionStateChange(bool IsAction)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
+		FString::Printf(TEXT("Action status: %hs"), IsAction ? "true" : "false"));
+}
+
 
 float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
                                  AActor* DamageCauser)

@@ -7,6 +7,8 @@
 #include "GameFramework/Actor.h"
 #include "SpawnManager.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnManagerStateNotifier, bool, IsAction);
+
 UCLASS()
 class WGAGAME_API ASpawnManager : public AActor
 {
@@ -45,12 +47,15 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int WavesNumber;
-	
+
+	UPROPERTY(VisibleAnywhere)
 	int CurrentEnemyNumber;
 
+	FSpawnManagerStateNotifier StateNotifier;
 private:
 	// Number of enemies spawned in current wave
-	
+
+	UPROPERTY(VisibleAnywhere)
 	int CurrentWaveNumber;
 
 	bool IsActivated;

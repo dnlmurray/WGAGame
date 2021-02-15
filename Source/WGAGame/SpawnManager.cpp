@@ -7,7 +7,6 @@
 #include <string>
 
 
-
 #include "WGAGameGameModeBase.h"
 
 // Sets default values
@@ -45,24 +44,32 @@ void ASpawnManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (CurrentWaveNumber < WavesNumber && CurrentEnemyNumber == 0 && IsActivated)
+	if (IsActivated && CurrentEnemyNumber == 0)
 	{
-		SpawnWave();
-		CurrentWaveNumber ++;
-	} else if (CurrentWaveNumber >= WavesNumber)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));
+		if (CurrentWaveNumber < WavesNumber)
+		{
+			CurrentWaveNumber ++;
+			SpawnWave();
+		}
+		else
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));
+			IsActivated = false;
+			StateNotifier.Broadcast(IsActivated);
+		}
 	}
 
 }
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
 {
-	if (!IsActivated)
-	{
+	if (!IsActivated && CurrentWaveNumber == 0)
+	{	
 		IsActivated = true;
 
 		CurrentWaveNumber = 1; // spawn first wave
+
+		StateNotifier.Broadcast(IsActivated);
 
 		if (CurrentWaveNumber <= WavesNumber)
 		{
