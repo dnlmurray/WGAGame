@@ -8,7 +8,7 @@
 
 
 
-#include "MeleeWeapon.h"
+#include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -43,21 +43,16 @@ void AMainCharacter::OnActionStateChange(bool IsAction)
 float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
                                  AActor* DamageCauser)
 {
-	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Player damaged!"));
+	UActorComponent* WeaponComponent = DamageCauser->GetComponentByClass(UWeapon::StaticClass());
 
-	if (DamageCauser->GetClass()->IsChildOf(AMeleeWeapon::StaticClass()))
+	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
+		DamageCauser->GetClass()->IsChildOf((AEnemy::StaticClass())))
 	{
-		AMeleeWeapon* Weapon = static_cast<AMeleeWeapon*>(DamageCauser);
-		AActor* WeaponOwner = Weapon->WeaponOwner;
-		assert(WeaponOwner != nullptr);
+		Health -= DamageAmount;
 
-		if (WeaponOwner->GetClass()->IsChildOf(AEnemy::StaticClass())) {
-			Health -= DamageAmount;
-
-			if (Health <= 0)
-			{
-				OnPlayerDeath();
-			}
+		if (Health <= 0)
+		{
+			OnPlayerDeath();
 		}
 	}
 

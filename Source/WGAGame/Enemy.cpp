@@ -7,13 +7,12 @@
 
 
 #include "MainCharacter.h"
-#include "MeleeWeapon.h"
+#include "Weapon.h"
 
 // Sets default values
 AEnemy::AEnemy()
 	: MaxHealth(100)
 	, Health(MaxHealth)
-	, EnemyWeapon(nullptr)
 	, SpawnManager(nullptr)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -30,21 +29,17 @@ float AEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AC
 	AActor* DamageCauser)
 {
 	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy damaged!"));
-
-	if (DamageCauser->GetClass()->IsChildOf(AMeleeWeapon::StaticClass()))
+	
+	UActorComponent* WeaponComponent = DamageCauser->GetComponentByClass(UWeapon::StaticClass());
+	
+	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
+		DamageCauser->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
 	{
-		AMeleeWeapon* Weapon = static_cast<AMeleeWeapon*>(DamageCauser);
-		AActor* WeaponOwner = Weapon->WeaponOwner;
-		assert(WeaponOwner != nullptr);
-		
-		if (WeaponOwner->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
-		{
-			Health -= DamageAmount;
+		Health -= DamageAmount;
 
-			if (Health <= 0)
-			{
-				OnEnemyDeath();
-			}
+		if (Health <= 0)
+		{
+			OnEnemyDeath();
 		}
 	}
 
@@ -63,7 +58,6 @@ void AEnemy::OnEnemyDeath()
 	assert(SpawnManager != nullptr);
 	assert(EnemyWeapon != nullptr);
 
-	EnemyWeapon->Destroy();
 	SpawnManager->CurrentEnemyNumber --;
 	Destroy();
 }

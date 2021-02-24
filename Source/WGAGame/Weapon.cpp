@@ -53,7 +53,7 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 	if(!bExecutionEnabled) return;
 	
 	UWorld* WorldReference = GetWorld();
-	FTransform NewTransform = Owner->GetActorTransform();
+	FTransform NewTransform = Owner->GetMesh()->GetSocketTransform("WeaponSocket");
 	FVector TraceBegin, TraceEnd;
 
 	FHitResult HitResult;
@@ -69,7 +69,9 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 		{
 			if(HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
 			{
-				if (HitResult.Actor != Owner && HitResult.Actor.Get() != LastActor) 
+				ACharacter* HitCharacter = Cast<ACharacter>(HitResult.Actor);
+				
+				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
 					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,
 						                        SwordDamage,

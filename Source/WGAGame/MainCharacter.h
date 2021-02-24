@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 
-#include "MeleeWeapon.h"
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 

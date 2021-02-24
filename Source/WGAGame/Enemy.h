@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 
 
-#include "MeleeWeapon.h"
+#include "Weapon.h"
 #include "SpawnManager.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"
@@ -43,9 +43,6 @@ public:
 private:
 	void OnEnemyDeath();
 
-public:
-	UPROPERTY(BlueprintReadWrite)
-	AMeleeWeapon* EnemyWeapon;
 	
 private:
 	ASpawnManager* SpawnManager;
