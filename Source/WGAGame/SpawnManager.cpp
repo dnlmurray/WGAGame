@@ -14,7 +14,7 @@ ASpawnManager::ASpawnManager()
 	: WavesNumber(1)
 	, CurrentEnemyNumber(0)
 	, CurrentWaveNumber(0)
-	, IsActivated(false)
+	, bIsActivated(false)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -44,7 +44,7 @@ void ASpawnManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (IsActivated && CurrentEnemyNumber == 0)
+	if (bIsActivated && CurrentEnemyNumber == 0)
 	{
 		if (CurrentWaveNumber < WavesNumber)
 		{
@@ -53,9 +53,9 @@ void ASpawnManager::Tick(float DeltaTime)
 		}
 		else
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));
-			IsActivated = false;
-			StateNotifier.Broadcast(IsActivated);
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));
+			bIsActivated = false;
+			StateNotifier.Broadcast(bIsActivated);
 		}
 	}
 
@@ -63,13 +63,13 @@ void ASpawnManager::Tick(float DeltaTime)
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
 {
-	if (!IsActivated && CurrentWaveNumber == 0)
+	if (!bIsActivated && CurrentWaveNumber == 0)
 	{	
-		IsActivated = true;
+		bIsActivated = true;
 
 		CurrentWaveNumber = 1; // spawn first wave
 
-		StateNotifier.Broadcast(IsActivated);
+		StateNotifier.Broadcast(bIsActivated);
 
 		if (CurrentWaveNumber <= WavesNumber)
 		{
@@ -80,8 +80,8 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 
 void ASpawnManager::SpawnWave()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
-	                                 FString::Printf(TEXT("Begin wave number %d"), CurrentWaveNumber));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
+	//                                FString::Printf(TEXT("Begin wave number %d"), CurrentWaveNumber));
 	
 	for (auto& point : SpawnPoints)
 	{

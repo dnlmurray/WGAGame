@@ -115,3 +115,10 @@ void UWeapon::SetNodes(const FVector& StartLocation, const FVector& EndLocation,
 		Nodes[Count] = UnitVector * (Step * Count);
 	}
 }
+
+void UWeapon::DestroyComponent(bool bPromoteChildren)
+{
+	Super::DestroyComponent(bPromoteChildren);
+
+	WeaponVisual->Destroy();
+}

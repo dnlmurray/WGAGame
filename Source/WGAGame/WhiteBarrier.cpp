@@ -66,13 +66,11 @@ void UWhiteBarrier::CheckIfOwnerIsUnderEffect()
 
 	if (OwnerIsUnderEffect && ConfigurationData->WhiteBarrierConfiguration.Debug && GEngine)
 		GEngine->AddOnScreenDebugMessage(
-                        -1,
-                        5.f,
-                        FColor::Green,
-                        TEXT("[WB]: Effect is applied."),
-                        true,
-                        FVector2D(1.0f, 1.0f));
-		
-		
+			-1,
+			5.f,
+			FColor::Green,
+			TEXT("[WB]: Effect is applied."),
+			true,
+			FVector2D(1.0f, 1.0f));
 }
 

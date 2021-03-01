@@ -29,6 +29,9 @@ public:
 	UFUNCTION()
 	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 
+	UFUNCTION(BlueprintCallable)
+	bool IsActivated() { return bIsActivated; }
+	
 private:
 
 	void SpawnWave();
@@ -58,5 +61,5 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	int CurrentWaveNumber;
 
-	bool IsActivated;
+	bool bIsActivated;
 };

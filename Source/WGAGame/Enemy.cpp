@@ -59,6 +59,14 @@ void AEnemy::OnEnemyDeath()
 	assert(EnemyWeapon != nullptr);
 
 	SpawnManager->CurrentEnemyNumber --;
+	
+	auto& Components = this->GetComponents();
+
+	for (auto& Component : Components)
+	{
+		Component->DestroyComponent();
+	}
+	
 	Destroy();
 }
 
