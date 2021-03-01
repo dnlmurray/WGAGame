@@ -55,7 +55,7 @@ public:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	virtual void DestroyComponent(bool bPromoteChildren) override;
+	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
 	
 private:
 	// An array of nodes which are used to detect weapon collision.

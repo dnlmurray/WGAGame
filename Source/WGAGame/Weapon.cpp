@@ -116,9 +116,12 @@ void UWeapon::SetNodes(const FVector& StartLocation, const FVector& EndLocation,
 	}
 }
 
-void UWeapon::DestroyComponent(bool bPromoteChildren)
+void UWeapon::OnComponentDestroyed(bool bDestroyingHierarchy)
 {
-	Super::DestroyComponent(bPromoteChildren);
+	Super::OnComponentDestroyed(bDestroyingHierarchy);
 
-	WeaponVisual->Destroy();
+	if (IsValid(WeaponVisual))
+	{
+		WeaponVisual->Destroy();
+	}
 }

@@ -4,8 +4,6 @@
 
 #include "CoreMinimal.h"
 
-
-#include "Weapon.h"
 #include "SpawnManager.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"

@@ -60,13 +60,6 @@ void AEnemy::OnEnemyDeath()
 
 	SpawnManager->CurrentEnemyNumber --;
 	
-	auto& Components = this->GetComponents();
-
-	for (auto& Component : Components)
-	{
-		Component->DestroyComponent();
-	}
-	
 	Destroy();
 }
 
