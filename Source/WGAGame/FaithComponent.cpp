@@ -17,7 +17,7 @@ void UFaithComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//FaithValue = FaithMaxValue;
+	FaithValue = ConfigurationData->FaithConfiguration.MaximumFaith;
 }
 
 
@@ -28,6 +28,6 @@ void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 	if (!bFaithDecreasingIsEnabled) return;
 
-	FaithValue -= FaithDecreasingSpeed * DeltaTime;
+	FaithValue -= ConfigurationData->FaithConfiguration.FaithDecreasingPerSecond * DeltaTime;
 }
 

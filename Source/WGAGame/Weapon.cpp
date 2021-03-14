@@ -36,10 +36,11 @@ void UWeapon::BeginPlay()
 	WeaponVisual->AttachToComponent(Owner->GetMesh(), AttachmentTransformRules, FName("WeaponSocket"));
 }
 
-void UWeapon::Initialize(UAbilitiesConfig* Config)
+void UWeapon::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
 {
 	ConfigurationData = Config;
-
+    AbilitiesState    = State;
+	
 	SetNodes(ConfigurationData->WeaponAttackConfiguration.Start,
              ConfigurationData->WeaponAttackConfiguration.End,
              ConfigurationData->WeaponAttackConfiguration.NumberOfNodes);
@@ -73,11 +74,23 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
+					if (AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+					{
+						AbilitiesState->CumulativeFaithGainFromWeaponAttack +=
+							ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack;
+					}
+					else
+					{
+						// If you need some faith reduction per standart attack
+						// make it here and don't forget change the AbilityConfig.h
+					}
+
 					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,
 						                        SwordDamage,
 						             nullptr, 
 						             Owner);
 					LastActor = HitResult.Actor.Get();
+
 				}
 			}
 		}

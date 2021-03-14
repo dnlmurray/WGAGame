@@ -29,7 +29,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	
 	void OnPlayerDeath();
 	
 public:	

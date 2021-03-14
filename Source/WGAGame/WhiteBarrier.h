@@ -6,6 +6,7 @@
 
 #include "GameFramework/Character.h"
 #include "AbilitiesConfig.h"
+#include "AbilitiesState.h"
 #include "Components/ActorComponent.h"
 #include "WhiteBarrier.generated.h"
 
@@ -39,10 +40,11 @@ public:
 	TSubclassOf<AWhiteBarrierVisual> WhiteBarrierObject;
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config)
+    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
 	{
 		ConfigurationData = Config;
-		Owner = Cast<ACharacter>(GetOwner());
+		AbilitiesState    = State;
+		Owner             = Cast<ACharacter>(GetOwner());
 	}
 	
 private:
@@ -59,6 +61,8 @@ private:
 	ACharacter const* Owner;
 
 	AWhiteBarrierVisual* WhiteBarrierObjectRef;
+
+	UAbilitiesState* AbilitiesState;
 	
 	float TimeSinceActivation;
 

@@ -3,6 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+
+#include "AbilitiesConfig.h"
+#include "WhiteBarrier.h"
 #include "Components/ActorComponent.h"
 #include "FaithComponent.generated.h"
 
@@ -15,9 +18,6 @@ class WGAGAME_API UFaithComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UFaithComponent();
-
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Enable/disable faith decreasing when the character is in battle/out of battle
 	UFUNCTION(BlueprintCallable)
@@ -32,15 +32,22 @@ public:
 
 	// ...
 	UFUNCTION(BlueprintCallable)
-	void SetFaithDecreasingSpeed(float Speed) { FaithDecreasingSpeed = Speed; }
+	bool GetFaithDecreasingStatus() const { return bFaithDecreasingIsEnabled; }
+
+	UFUNCTION(BlueprintCallable)
+    void Initialize(UAbilitiesConfig* Config) { ConfigurationData = Config; }
 	
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-private:	
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+private:
+	UAbilitiesConfig* ConfigurationData;
+	
 	float FaithValue;
-	float FaithDecreasingSpeed;
 
 	uint8 bFaithDecreasingIsEnabled:1;
 	

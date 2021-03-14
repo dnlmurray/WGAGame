@@ -90,6 +90,32 @@ struct FExorcismConfiguration
     bool Debug;
 };
 
+USTRUCT(BlueprintType)
+struct FImpulseConfiguration
+{
+	GENERATED_USTRUCT_BODY()
+
+    FImpulseConfiguration() { }
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Radius;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Damage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Cooldown;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FaithGain;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float PushVelocity;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	bool Debug;
+};
+
 UCLASS(BlueprintType)
 class WGAGAME_API UAbilitiesConfig : public UDataAsset
 {
@@ -107,4 +133,7 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FExorcismConfiguration ExorcismConfiguration;
-};
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FImpulseConfiguration ImpulseConfiguration;
+}; 

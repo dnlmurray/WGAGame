@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "AbilitiesConfig.h"
+#include "AbilitiesState.h"
+
 #include "Weapon.generated.h"
 
 UCLASS()
@@ -39,15 +41,10 @@ public:
     void DisableDamageApplying();
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config);
-
+    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State);
 	// Creates nodes on the line between StartLocation and EndLocation
 	UFUNCTION(BlueprintCallable)
     void SetNodes(const FVector& StartLocation, const FVector& EndLocation, int32 NumberOfNodes);
-
-	// Visual representation
-	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
-	TSubclassOf<AWeaponVisual> WeaponVisualObject;
 	
 	// Overrided Tick funtion, isn't really used as is is just a base class
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -56,6 +53,10 @@ public:
 	virtual void BeginPlay() override;
 
 	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
+
+	// Visual representation
+	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
+	TSubclassOf<AWeaponVisual> WeaponVisualObject;
 	
 private:
 	// An array of nodes which are used to detect weapon collision.
@@ -78,6 +79,9 @@ private:
 	// General configuration
 	UAbilitiesConfig const* ConfigurationData;
 
+	// External state component
+	UAbilitiesState* AbilitiesState;
+	
 	// Property structure for the line trace function
 	FCollisionQueryParams CollisionQueryParams;
 

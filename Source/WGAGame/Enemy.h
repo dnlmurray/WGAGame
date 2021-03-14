@@ -40,7 +40,6 @@ public:
 
 private:
 	void OnEnemyDeath();
-
 	
 private:
 	ASpawnManager* SpawnManager;

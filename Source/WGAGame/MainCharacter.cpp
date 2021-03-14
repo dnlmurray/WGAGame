@@ -6,15 +6,13 @@
 
 #include <cassert>
 
-
-
 #include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMainCharacter::AMainCharacter()
-	: MaxHealth(600)
+	: MaxHealth(400)
 	, Health(MaxHealth)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -35,8 +33,8 @@ void AMainCharacter::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActo
 
 void AMainCharacter::OnActionStateChange(bool IsAction)
 {
-	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
-	// 	FString::Printf(TEXT("Action status: %hs"), IsAction ? "true" : "false"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
+		FString::Printf(TEXT("Action status: %hs"), IsAction ? "true" : "false"));
 }
 
 
@@ -61,7 +59,8 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 
 void AMainCharacter::OnPlayerDeath()
 {
-	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED"));
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED"));
 
 	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
 	GameMode->OnPlayerDeath();
