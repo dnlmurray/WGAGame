@@ -3,6 +3,7 @@
 
 #include "Weapon.h"
 #include "DrawDebugHelpers.h"
+#include "Enemy.h"
 #include "GameFramework/Character.h"
 
 // Make sure this redefenition matches the corresponding one in the DefaultEngine.ini file
@@ -36,10 +37,11 @@ void UWeapon::BeginPlay()
 	WeaponVisual->AttachToComponent(Owner->GetMesh(), AttachmentTransformRules, FName("WeaponSocket"));
 }
 
-void UWeapon::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
+void UWeapon::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State, UFaithComponent* Faith)
 {
 	ConfigurationData = Config;
     AbilitiesState    = State;
+	FaithComponent    = Faith;
 	
 	SetNodes(ConfigurationData->WeaponAttackConfiguration.Start,
              ConfigurationData->WeaponAttackConfiguration.End,
@@ -74,21 +76,20 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
-					if (AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
-					{
-						AbilitiesState->CumulativeFaithGainFromWeaponAttack +=
-							ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack;
-					}
-					else
-					{
-						// If you need some faith reduction per standart attack
-						// make it here and don't forget change the AbilityConfig.h
-					}
+					// if (AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+					// {
+					// 	FaithComponent->RestoreFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+					// }
+					// else
+					// {
+					// 	// If you need some faith reduction per standart attack
+					// 	// make it here and don't forget change the AbilityConfig.h
+					// }
 
 					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,
-						                        SwordDamage,
-						             nullptr, 
-						             Owner);
+					                            SwordDamage,
+					                            nullptr,
+					                            Owner);
 					LastActor = HitResult.Actor.Get();
 
 				}
@@ -96,7 +97,9 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 		}
 		
 		if (ConfigurationData->WeaponAttackConfiguration.Debug)
+		{
 			DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, true, 10.0f, 0, 1);
+		}
 		
 		CurrentTransform = NewTransform;
 	}

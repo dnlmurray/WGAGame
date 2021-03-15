@@ -7,6 +7,5 @@
 
 void AWGAGameGameModeBase::OnPlayerDeath() const
 {
-	const FString CurrentLevelName = GetWorld()->GetMapName();
-	UGameplayStatics::OpenLevel(GetWorld(), *CurrentLevelName);
+	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
 }
