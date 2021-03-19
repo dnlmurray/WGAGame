@@ -19,25 +19,28 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override final;
 
 	UFUNCTION()
-    void OnActionStateChange(bool IsAction);
-
-	UFUNCTION()
 	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 	
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-private:
-	void OnPlayerDeath();
+	UFUNCTION(BlueprintImplementableEvent)
+    void OnActionStateChange(bool EnableFaithDecrease);
 	
-public:	
+	UFUNCTION(BlueprintImplementableEvent)
+	void OnEnemyKill();
+	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
+private:
+	void OnPlayerDeath() const;
 	
+public:
 	UPROPERTY(BlueprintReadOnly)
 	float MaxHealth;
 	

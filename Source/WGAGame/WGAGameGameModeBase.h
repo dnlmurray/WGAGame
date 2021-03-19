@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 
-#include "Enemy.h"
 #include "GameFramework/GameModeBase.h"
 #include "WGAGameGameModeBase.generated.h"
 
@@ -18,4 +17,6 @@ class WGAGAME_API AWGAGameGameModeBase : public AGameModeBase
 
 public:
 	void OnPlayerDeath() const;
+
+	void OnEnemyKill() const;
 };

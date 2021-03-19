@@ -7,7 +7,7 @@
 #include <string>
 
 
-#include "WGAGameGameModeBase.h"
+#include "Enemy.h"
 
 // Sets default values
 ASpawnManager::ASpawnManager()

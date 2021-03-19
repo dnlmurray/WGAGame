@@ -28,14 +28,16 @@ public:
 
 	// Restore some amount of faith when special skills are applied
 	UFUNCTION(BlueprintCallable)
-	void RestoreFaith(float Faith) { FaithValue += Faith; }
+	void RestoreFaith(float Faith);
 
-	// ...
 	UFUNCTION(BlueprintCallable)
 	bool GetFaithDecreasingStatus() const { return bFaithDecreasingIsEnabled; }
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config) { ConfigurationData = Config; }
+    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State);
+
+	UFUNCTION(BlueprintCallable)
+	void DecreasePerKill();
 	
 protected:
 	// Called when the game starts
@@ -45,10 +47,27 @@ protected:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
-	UAbilitiesConfig* ConfigurationData;
+	// Decrease faith on demand
+    void DecreaseFaith(float Faith);
+
+	void OnZeroFaith() const;
+
+	void CheckFaithAmount() const;
+
+public:
+	UPROPERTY(BlueprintReadOnly)
+	float MaxFaith;
 	
+	UPROPERTY(BlueprintReadWrite)
 	float FaithValue;
+	
+private:
+	UPROPERTY()
+	UAbilitiesConfig* ConfigurationData;
+
+	UPROPERTY()
+	UAbilitiesState* AbilitiesState;
+	
 
 	uint8 bFaithDecreasingIsEnabled:1;
-	
 };

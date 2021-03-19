@@ -28,7 +28,10 @@ struct FFaithConfiguration
 	float MaximumFaith;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithDecreasingPerSecond;
+	float FaithDecreasePerSecond;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FaithDecreasePerKill;
 };
 
 USTRUCT(BlueprintType)

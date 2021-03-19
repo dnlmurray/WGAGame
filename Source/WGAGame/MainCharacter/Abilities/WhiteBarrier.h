@@ -7,6 +7,7 @@
 #include "GameFramework/Character.h"
 #include "AbilitiesConfig.h"
 #include "AbilitiesState.h"
+#include "Ability.h"
 #include "Components/ActorComponent.h"
 #include "WhiteBarrier.generated.h"
 
@@ -17,7 +18,7 @@ class AWhiteBarrierVisual : public AActor
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class WGAGAME_API UWhiteBarrier : public UActorComponent
+class WGAGAME_API UWhiteBarrier : public UAbility
 {
 	GENERATED_BODY()
 
@@ -55,14 +56,9 @@ private:
 	void CheckIfOwnerIsUnderEffect();
 	
 	FVector Location;
-	
-	UAbilitiesConfig const* ConfigurationData;
 
-	ACharacter const* Owner;
-
+	UPROPERTY()
 	AWhiteBarrierVisual* WhiteBarrierObjectRef;
-
-	UAbilitiesState* AbilitiesState;
 	
 	float TimeSinceActivation;
 

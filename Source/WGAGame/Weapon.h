@@ -70,20 +70,26 @@ private:
 	FTransform CurrentTransform;
 
 	// Weapon's visual representation
+	UPROPERTY()
 	AWeaponVisual* WeaponVisual;
 
 	// This component's owner
+	UPROPERTY()
 	ACharacter* Owner;
 
 	// Last actor hit by this weapon
+	UPROPERTY()
 	AActor const* LastActor;
 	
 	// General configuration
+	UPROPERTY()
 	UAbilitiesConfig const* ConfigurationData;
 
 	// External state component
+	UPROPERTY()
 	UAbilitiesState* AbilitiesState;
 
+	UPROPERTY()
 	UFaithComponent* FaithComponent;
 	
 	// Property structure for the line trace function

@@ -3,9 +3,7 @@
 
 #include "MainCharacter.h"
 #include "SpawnManager.h"
-
-#include <cassert>
-
+#include "Enemy.h"
 #include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
@@ -31,13 +29,6 @@ void AMainCharacter::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActo
 	}
 }
 
-void AMainCharacter::OnActionStateChange(bool IsAction)
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
-		FString::Printf(TEXT("Action status: %hs"), IsAction ? "true" : "false"));
-}
-
-
 float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
                                  AActor* DamageCauser)
 {
@@ -57,10 +48,9 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 	return 0;
 }
 
-void AMainCharacter::OnPlayerDeath()
+void AMainCharacter::OnPlayerDeath() const
 {
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED"));
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED: 0 HEALTH"));
 
 	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
 	GameMode->OnPlayerDeath();

@@ -7,6 +7,8 @@
 #include "GameFramework/Character.h"
 #include "AbilitiesConfig.h"
 #include "AbilitiesState.h"
+#include "Ability.h"
+
 #include "Impulse.generated.h"
 
 #define ECC_Magic ECollisionChannel::ECC_GameTraceChannel2
@@ -20,7 +22,7 @@ class AImpulseVisual : public AActor
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class WGAGAME_API UImpulse : public UActorComponent
+class WGAGAME_API UImpulse : public UAbility
 {
 	GENERATED_BODY()
 
@@ -47,9 +49,7 @@ public:
 	TSubclassOf<AImpulseVisual> ImpulseVisualObject;
 
 private:
-	UAbilitiesConfig const* ConfigurationData;
-	UAbilitiesState const*  AbilitiesState;
-	ACharacter const*       Owner;
+	UPROPERTY()
 	AImpulseVisual*         VisualObjectRef;
 	float                   TimeSinceLastActivation;
 	bool                    bWasActivated;

@@ -3,6 +3,13 @@
 
 #include "FaithComponent.h"
 
+#include <string>
+
+
+
+#include "MainCharacter.h"
+#include "WGAGameGameModeBase.h"
+
 // Sets default values for this component's properties
 UFaithComponent::UFaithComponent()
 {
@@ -16,18 +23,85 @@ UFaithComponent::UFaithComponent()
 void UFaithComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	FaithValue = ConfigurationData->FaithConfiguration.MaximumFaith;
 }
 
 
-// Called every frame
+// Called every frame: faith decrease on tick
 void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
+	
+	auto temp = bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect;
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if (!bFaithDecreasingIsEnabled) return;
-
-	FaithValue -= ConfigurationData->FaithConfiguration.FaithDecreasingPerSecond * DeltaTime;
+	// GEngine->AddOnScreenDebugMessage(
+ //    -1,
+ //    5.f,
+ //    FColor::Green,
+ //    bFaithDecreasingIsEnabled ? TEXT("faith decrease") : TEXT("faith non decrease"),
+ //    true,
+ //    FVector2D(1.0f, 1.0f));
+	if (bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+	{
+		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerSecond * DeltaTime);
+	}
 }
 
+// faith decrease on kill
+void UFaithComponent::DecreasePerKill()
+{
+	if (bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+	{
+		GEngine->AddOnScreenDebugMessage(
+		-1,
+		5.f,
+		FColor::Blue,
+		TEXT("Faith decrease on kill"),
+		true,
+		FVector2D(1.0f, 1.0f));
+		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerKill);
+	}
+}
+
+void UFaithComponent::OnZeroFaith() const
+{
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED: 0 FAITH"));
+
+	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+	GameMode->OnPlayerDeath();
+}
+
+void UFaithComponent::CheckFaithAmount() const
+{
+	if (FaithValue <= 0)
+	{
+		OnZeroFaith();
+	}
+}
+
+void UFaithComponent::RestoreFaith(float Faith)
+{
+	GEngine->AddOnScreenDebugMessage(
+	-1,
+	5.f,
+	FColor::Blue,
+	TEXT("Faith gain"),
+	true,
+	FVector2D(1.0f, 1.0f));
+	
+	FaithValue += Faith;
+	FMath::Clamp(FaithValue, 0.0f, ConfigurationData->FaithConfiguration.MaximumFaith);
+}
+
+void UFaithComponent::DecreaseFaith(float Faith)
+{
+	FaithValue -= Faith;
+	CheckFaithAmount();
+}
+
+void UFaithComponent::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
+{
+	ConfigurationData = Config;
+	AbilitiesState = State;
+
+	MaxFaith = ConfigurationData->FaithConfiguration.MaximumFaith;
+	FaithValue = MaxFaith;
+}

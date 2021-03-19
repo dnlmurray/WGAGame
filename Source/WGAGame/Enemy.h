@@ -42,6 +42,7 @@ private:
 	void OnEnemyDeath();
 	
 private:
+	UPROPERTY()
 	ASpawnManager* SpawnManager;
 };
 

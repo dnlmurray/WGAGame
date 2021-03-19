@@ -57,6 +57,12 @@ void UWhiteBarrier::Remove()
 	WhiteBarrierObjectRef->Destroy();
 	IsActive = false;
 	OwnerIsCasting = false;
+	OwnerIsUnderEffect = false;
+
+	if (AbilitiesState != nullptr) {
+		AbilitiesState->CharacterIsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
+		AbilitiesState->CharacterIsInvincible = OwnerIsCasting;
+	}
 }
 
 void UWhiteBarrier::CheckIfOwnerIsUnderEffect()

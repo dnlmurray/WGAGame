@@ -8,6 +8,7 @@
 
 #include "MainCharacter.h"
 #include "Weapon.h"
+#include "WGAGameGameModeBase.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -59,6 +60,8 @@ void AEnemy::OnEnemyDeath()
 	assert(EnemyWeapon != nullptr);
 
 	SpawnManager->CurrentEnemyNumber --;
+	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+	GameMode->OnEnemyKill();
 	
 	Destroy();
 }

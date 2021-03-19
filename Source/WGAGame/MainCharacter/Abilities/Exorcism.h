@@ -7,6 +7,8 @@
 #include "Components/ActorComponent.h"
 #include "GameFramework/Character.h"
 #include "AbilitiesState.h"
+#include "Ability.h"
+
 #include "Exorcism.generated.h"
 
 #define ECC_Magic ECollisionChannel::ECC_GameTraceChannel2
@@ -20,7 +22,7 @@ class AExorcismVisual : public AActor
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class WGAGAME_API UExorcism : public UActorComponent
+class WGAGAME_API UExorcism : public UAbility
 {
 	GENERATED_BODY()
 
@@ -48,9 +50,7 @@ public:
 	TSubclassOf<AExorcismVisual> WeaponVisualObject;
 
 private:
-	ACharacter const*       Owner;
-	UAbilitiesConfig const* ConfigurationData;
-	UAbilitiesState*        AbilitiesState;
+	UPROPERTY()
 	AExorcismVisual*        VisualObjectRef;
 	float                   TimeSinceLastActivation;
 	bool                    bWasActivated;

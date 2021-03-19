@@ -76,15 +76,11 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
-					// if (AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
-					// {
-					// 	FaithComponent->RestoreFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
-					// }
-					// else
-					// {
-					// 	// If you need some faith reduction per standart attack
-					// 	// make it here and don't forget change the AbilityConfig.h
-					// }
+					if (AbilitiesState != nullptr && FaithComponent != nullptr &&
+						AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+					{	
+						FaithComponent->RestoreFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+					}
 
 					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,
 					                            SwordDamage,
