@@ -29,16 +29,12 @@ void UFaithComponent::BeginPlay()
 // Called every frame: faith decrease on tick
 void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	
-	auto temp = bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect;
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	// GEngine->AddOnScreenDebugMessage(
- //    -1,
- //    5.f,
- //    FColor::Green,
- //    bFaithDecreasingIsEnabled ? TEXT("faith decrease") : TEXT("faith non decrease"),
- //    true,
- //    FVector2D(1.0f, 1.0f));
+
+	// GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue,
+	// 	FString::Printf(TEXT("faith decrease is enabled: %s"), GetFaithDecreasingStatus() ? TEXT("true") : TEXT("false")));
+	//
+	//
 	if (bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
 	{
 		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerSecond * DeltaTime);
@@ -87,8 +83,7 @@ void UFaithComponent::RestoreFaith(float Faith)
 	true,
 	FVector2D(1.0f, 1.0f));
 	
-	FaithValue += Faith;
-	FMath::Clamp(FaithValue, 0.0f, ConfigurationData->FaithConfiguration.MaximumFaith);
+	FaithValue = FMath::Clamp(FaithValue + Faith, 0.0f, ConfigurationData->FaithConfiguration.MaximumFaith);
 }
 
 void UFaithComponent::DecreaseFaith(float Faith)

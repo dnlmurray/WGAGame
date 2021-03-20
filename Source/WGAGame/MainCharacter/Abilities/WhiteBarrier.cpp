@@ -54,6 +54,8 @@ void UWhiteBarrier::Place()
 
 void UWhiteBarrier::Remove()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("WB removed"));
+
 	WhiteBarrierObjectRef->Destroy();
 	IsActive = false;
 	OwnerIsCasting = false;
@@ -67,6 +69,8 @@ void UWhiteBarrier::Remove()
 
 void UWhiteBarrier::CheckIfOwnerIsUnderEffect()
 {
+	if (!IsActive) return;
+	
 	float Distance = (Owner->GetActorLocation() - Location).Size();
 	Distance = FMath::Abs(Distance);
 
@@ -74,11 +78,12 @@ void UWhiteBarrier::CheckIfOwnerIsUnderEffect()
         = (Distance <= ConfigurationData->WhiteBarrierConfiguration.Radius) ? true : false;
 
 	if (OwnerIsUnderEffect && ConfigurationData->WhiteBarrierConfiguration.Debug && GEngine)
+	{
 		if (OwnerIsCasting)
 		{
 			GEngine->AddOnScreenDebugMessage(
                         -1,
-                        5.f,
+                        1.f,
                         FColor::Green,
                         TEXT("[WB]: Casting: owner is invincible."),
                         true,
@@ -87,12 +92,14 @@ void UWhiteBarrier::CheckIfOwnerIsUnderEffect()
 		{
 			GEngine->AddOnScreenDebugMessage(
                          -1,
-                         5.f,
+                         1.f,
                          FColor::Green,
                          TEXT("[WB]: Effect is applied."),
                          true,
                          FVector2D(1.0f, 1.0f));
 		}
+	}
+
 	if (AbilitiesState != nullptr) {
 		AbilitiesState->CharacterIsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
 		AbilitiesState->CharacterIsInvincible = OwnerIsCasting;

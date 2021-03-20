@@ -74,6 +74,9 @@ struct FWhiteBarrierConfiguration
 	float FaithGainPerStandartAttack;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HealthGainPerKill;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
     bool Debug;
 };
 
