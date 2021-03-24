@@ -114,4 +114,5 @@ void ASpawnManager::SpawnEnemy(UClass* EnemyClass, FVector SpawnLocation, FRotat
 	SpawnedEnemy->SetSpawnManager(this);
 	CurrentEnemyNumber++;
 	SpawnedEnemy->FinishSpawning(SpawnLocAndRotation);
+	SpawnedEnemy->OnSpawnReaction();
 }

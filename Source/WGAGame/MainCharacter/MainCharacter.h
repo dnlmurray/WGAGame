@@ -4,11 +4,12 @@
 
 #include "CoreMinimal.h"
 
+#include "WGACharacter.h"
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
-class WGAGAME_API AMainCharacter : public ACharacter
+class WGAGAME_API AMainCharacter : public AWGACharacter
 {
 	GENERATED_BODY()
 
@@ -38,12 +39,6 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	UFUNCTION(BlueprintCallable)
 	void OnPlayerDeath() const;
-	
-public:
-	UPROPERTY(BlueprintReadOnly)
-	float MaxHealth;
-	
-	UPROPERTY(BlueprintReadWrite)
-	float Health;
 };

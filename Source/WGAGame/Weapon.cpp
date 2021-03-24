@@ -79,7 +79,7 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 					if (AbilitiesState != nullptr && FaithComponent != nullptr &&
 						AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
 					{	
-						FaithComponent->RestoreFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+						FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
 					}
 
 					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,

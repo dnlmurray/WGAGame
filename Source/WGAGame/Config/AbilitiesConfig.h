@@ -7,7 +7,7 @@
 #include "AbilitiesConfig.generated.h"
 
 USTRUCT(BlueprintType)
-struct FPlayerStatsConfiguration
+struct FHealthConfiguration
 {
 	GENERATED_BODY()
 
@@ -15,7 +15,10 @@ struct FPlayerStatsConfiguration
 	float MaxHealth;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float MaxFaith;
+	float HealthIncreaseAfterLocationPassed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HealthIncreaseAfterLoad;
 };
 
 
@@ -25,7 +28,7 @@ struct FFaithConfiguration
 	GENERATED_BODY()
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float MaximumFaith;
+	float MaxFaith;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float FaithDecreasePerSecond;
@@ -134,8 +137,8 @@ class WGAGAME_API UAbilitiesConfig : public UDataAsset
 	GENERATED_BODY()
 
 public:
-	// UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	// FPlayerStatsConfiguration PlayerStatsConfiguration;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FHealthConfiguration HealthConfiguration;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FFaithConfiguration FaithConfiguration;

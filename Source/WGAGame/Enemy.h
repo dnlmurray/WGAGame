@@ -5,11 +5,12 @@
 #include "CoreMinimal.h"
 
 #include "SpawnManager.h"
+#include "WGACharacter.h"
 #include "GameFramework/Character.h"
 #include "Enemy.generated.h"
 
 UCLASS()
-class WGAGAME_API AEnemy : public ACharacter
+class WGAGAME_API AEnemy : public AWGACharacter
 {
 	GENERATED_BODY()
 
@@ -30,15 +31,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
-	UPROPERTY(BlueprintReadOnly)
-	float MaxHealth;
-	
-	UPROPERTY(BlueprintReadWrite)
-	float Health;
-
 	void SetSpawnManager(ASpawnManager* SpawnManager);
 
 private:
+	UFUNCTION(BlueprintCallable)
 	void OnEnemyDeath();
 	
 private:
