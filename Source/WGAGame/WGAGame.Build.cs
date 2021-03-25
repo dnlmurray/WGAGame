@@ -7,7 +7,15 @@ public class WGAGame : ModuleRules
 	public WGAGame(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-	
+		
+		//Folders to work with:
+		PrivateIncludePaths.AddRange(new string[] {
+			"WGAGame/Config",
+			"WGAGame/MainCharacter",
+			"WGAGame/MainCharacter/Abilities",
+			"WGAGame"
+		});
+		
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

@@ -1,0 +1,1 @@
+D:\Git\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
