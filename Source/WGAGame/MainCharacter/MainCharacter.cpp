@@ -10,8 +10,6 @@
 
 // Sets default values
 AMainCharacter::AMainCharacter()
-	: MaxHealth(400)
-	, Health(MaxHealth)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -37,12 +35,7 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
 		DamageCauser->GetClass()->IsChildOf((AEnemy::StaticClass())))
 	{
-		Health -= DamageAmount;
-
-		if (Health <= 0)
-		{
-			OnPlayerDeath();
-		}
+		OnHitReaction(DamageAmount);
 	}
 
 	return 0;
@@ -60,8 +53,7 @@ void AMainCharacter::OnPlayerDeath() const
 // Called when the game starts or when spawned
 void AMainCharacter::BeginPlay()
 {
-	Super::BeginPlay();
-	
+	Super::BeginPlay();	
 }
 
 // Called every frame

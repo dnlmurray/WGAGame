@@ -39,9 +39,12 @@ void UWeapon::BeginPlay()
 
 void UWeapon::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State, UFaithComponent* Faith)
 {
+	
 	ConfigurationData = Config;
     AbilitiesState    = State;
 	FaithComponent    = Faith;
+	
+	WeaponDamage = ConfigurationData->WeaponAttackConfiguration.Damage;
 	
 	SetNodes(ConfigurationData->WeaponAttackConfiguration.Start,
              ConfigurationData->WeaponAttackConfiguration.End,
@@ -79,10 +82,10 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 					if (AbilitiesState != nullptr && FaithComponent != nullptr &&
 						AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
 					{	
-						FaithComponent->RestoreFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+						FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
 					}
 
-					HitResult.Actor->TakeDamage(ConfigurationData->WeaponAttackConfiguration.Damage,
+					HitResult.Actor->TakeDamage(WeaponDamage,
 					                            SwordDamage,
 					                            nullptr,
 					                            Owner);

@@ -12,9 +12,7 @@
 
 // Sets default values
 AEnemy::AEnemy()
-	: MaxHealth(100)
-	, Health(MaxHealth)
-	, SpawnManager(nullptr)
+	: SpawnManager(nullptr)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -28,20 +26,13 @@ void AEnemy::SetSpawnManager(ASpawnManager* SM)
 
 float AEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
 	AActor* DamageCauser)
-{
-	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enemy damaged!"));
-	
+{	
 	UActorComponent* WeaponComponent = DamageCauser->GetComponentByClass(UWeapon::StaticClass());
 	
 	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
 		DamageCauser->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
 	{
-		Health -= DamageAmount;
-
-		if (Health <= 0)
-		{
-			OnEnemyDeath();
-		}
+		OnHitReaction(DamageAmount);
 	}
 
 	return 0;

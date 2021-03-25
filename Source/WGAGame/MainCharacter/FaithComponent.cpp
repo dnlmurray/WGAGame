@@ -3,13 +3,6 @@
 
 #include "FaithComponent.h"
 
-#include <string>
-
-
-
-#include "MainCharacter.h"
-#include "WGAGameGameModeBase.h"
-
 // Sets default values for this component's properties
 UFaithComponent::UFaithComponent()
 {
@@ -23,6 +16,8 @@ UFaithComponent::UFaithComponent()
 void UFaithComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	Owner = static_cast<AWGACharacter*>(GetOwner());
 }
 
 
@@ -61,8 +56,7 @@ void UFaithComponent::OnZeroFaith() const
 {
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED: 0 FAITH"));
 
-	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
-	GameMode->OnPlayerDeath();
+	Owner->OnDeathReaction(this);
 }
 
 void UFaithComponent::CheckFaithAmount() const
@@ -73,23 +67,19 @@ void UFaithComponent::CheckFaithAmount() const
 	}
 }
 
-void UFaithComponent::RestoreFaith(float Faith)
+void UFaithComponent::IncreaseFaith(float Faith)
 {
-	GEngine->AddOnScreenDebugMessage(
-	-1,
-	5.f,
-	FColor::Blue,
-	TEXT("Faith gain"),
-	true,
-	FVector2D(1.0f, 1.0f));
-	
-	FaithValue = FMath::Clamp(FaithValue + Faith, 0.0f, ConfigurationData->FaithConfiguration.MaximumFaith);
+	if (Faith >= 0) {
+		FaithValue = FMath::Clamp(FaithValue + Faith, 0.0f, MaxFaith);
+	}
 }
 
 void UFaithComponent::DecreaseFaith(float Faith)
 {
-	FaithValue -= Faith;
-	CheckFaithAmount();
+	if (Faith >= 0) {
+		FaithValue -= Faith;
+		CheckFaithAmount();
+	}
 }
 
 void UFaithComponent::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
@@ -97,6 +87,6 @@ void UFaithComponent::Initialize(UAbilitiesConfig* Config, UAbilitiesState* Stat
 	ConfigurationData = Config;
 	AbilitiesState = State;
 
-	MaxFaith = ConfigurationData->FaithConfiguration.MaximumFaith;
+	MaxFaith = ConfigurationData->FaithConfiguration.MaxFaith;
 	FaithValue = MaxFaith;
 }

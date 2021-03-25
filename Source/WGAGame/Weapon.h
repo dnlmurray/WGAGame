@@ -47,6 +47,18 @@ public:
 	// Creates nodes on the line between StartLocation and EndLocation
 	UFUNCTION(BlueprintCallable)
     void SetNodes(const FVector& StartLocation, const FVector& EndLocation, int32 NumberOfNodes);
+
+	UFUNCTION(BlueprintCallable)
+	void IncreaseDamage(float Damage)
+	{
+		this->WeaponDamage += Damage;
+	}
+
+	UFUNCTION(BlueprintCallable)
+	void ResetDamage()
+	{
+		this->WeaponDamage = ConfigurationData->WeaponAttackConfiguration.Damage;
+	}
 	
 	// Overrided Tick funtion, isn't really used as is is just a base class
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -56,6 +68,11 @@ public:
 
 	virtual void OnComponentDestroyed(bool bDestroyingHierarchy) override;
 
+public:
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bIsCombo;
+	
 	// Visual representation
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
 	TSubclassOf<AWeaponVisual> WeaponVisualObject;
@@ -97,5 +114,7 @@ private:
 
 	// If the flag is set then the weapon starts detecting collision and
 	// applying damage to anything it hits
-	uint8 bExecutionEnabled:1;		
+	uint8 bExecutionEnabled:1;
+
+	float WeaponDamage;
 };

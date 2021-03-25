@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "AbilitiesConfig.h"
+#include "WGACharacter.h"
 #include "WhiteBarrier.h"
 #include "Components/ActorComponent.h"
 #include "FaithComponent.generated.h"
@@ -28,7 +29,7 @@ public:
 
 	// Restore some amount of faith when special skills are applied
 	UFUNCTION(BlueprintCallable)
-	void RestoreFaith(float Faith);
+	void IncreaseFaith(float Faith);
 
 	UFUNCTION(BlueprintCallable)
 	bool GetFaithDecreasingStatus() const { return bFaithDecreasingIsEnabled; }
@@ -38,7 +39,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DecreasePerKill();
-	
+
+	UFUNCTION(BlueprintCallable)
+	void DecreaseFaith(float Faith);
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -48,7 +52,6 @@ protected:
 
 private:
 	// Decrease faith on demand
-    void DecreaseFaith(float Faith);
 
 	void OnZeroFaith() const;
 
@@ -58,7 +61,7 @@ public:
 	UPROPERTY(BlueprintReadOnly)
 	float MaxFaith;
 	
-	UPROPERTY(BlueprintReadWrite)
+	UPROPERTY(BlueprintReadOnly)
 	float FaithValue;
 	
 private:
@@ -67,7 +70,9 @@ private:
 
 	UPROPERTY()
 	UAbilitiesState* AbilitiesState;
-	
 
 	uint8 bFaithDecreasingIsEnabled:1;
+
+	UPROPERTY()
+	AWGACharacter* Owner;
 };

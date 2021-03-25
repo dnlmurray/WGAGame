@@ -16,7 +16,9 @@ class WGAGAME_API AWGAGameGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+	UFUNCTION(BlueprintCallable)
 	void OnPlayerDeath() const;
 
+	UFUNCTION(BlueprintCallable)
 	void OnEnemyKill() const;
 };
