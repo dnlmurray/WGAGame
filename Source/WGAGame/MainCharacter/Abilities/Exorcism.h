@@ -4,14 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "AbilitiesConfig.h"
-#include "Components/ActorComponent.h"
 #include "GameFramework/Character.h"
 #include "AbilitiesState.h"
 #include "Ability.h"
 
 #include "Exorcism.generated.h"
 
-#define ECC_Magic ECollisionChannel::ECC_GameTraceChannel2
+#define ECC_Weapon ECollisionChannel::ECC_GameTraceChannel1
 
 UCLASS()
 class AExorcismVisual : public AActor
@@ -35,23 +34,17 @@ public:
 
 	// Applies the effect to every enemy in the area
 	UFUNCTION(BlueprintCallable)
-    void ApplyEffect();
+    void Place(FVector ExorcismVector);
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
-	{
-		ConfigurationData = Config;
-		AbilitiesState    = State;
-		Owner             = Cast<ACharacter>(GetOwner());
-	}
+    void Initialize(UAbilitiesConfig* Config);
 
+public:
 	// Visual representation
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
-	TSubclassOf<AExorcismVisual> WeaponVisualObject;
+	TSubclassOf<AExorcismVisual> ExorcismVisual;
 
 private:
 	UPROPERTY()
-	AExorcismVisual*        VisualObjectRef;
-	float                   TimeSinceLastActivation;
-	bool                    bWasActivated;
+	AExorcismVisual*  ExorcismObjectRef;
 };

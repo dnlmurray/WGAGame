@@ -80,7 +80,7 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
 					if (AbilitiesState != nullptr && FaithComponent != nullptr &&
-						AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+						AbilitiesState->IsUnderWhiteBarrierEffect)
 					{	
 						FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
 					}

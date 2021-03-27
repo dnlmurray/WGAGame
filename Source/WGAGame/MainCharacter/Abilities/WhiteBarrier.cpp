@@ -31,6 +31,13 @@ void UWhiteBarrier::TickComponent(float DeltaTime, ELevelTick TickType, FActorCo
 	TimeSinceActivation += DeltaTime;
 }
 
+void UWhiteBarrier::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
+{
+	ConfigurationData = Config;
+	AbilitiesState    = State;
+	Owner             = Cast<ACharacter>(GetOwner());
+}
+
 void UWhiteBarrier::Place()
 {
 	if (IsActive || ConfigurationData->WhiteBarrierConfiguration.Duration == 0) return;
@@ -62,8 +69,8 @@ void UWhiteBarrier::Remove()
 	OwnerIsUnderEffect = false;
 
 	if (AbilitiesState != nullptr) {
-		AbilitiesState->CharacterIsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
-		AbilitiesState->CharacterIsInvincible = OwnerIsCasting;
+		AbilitiesState->IsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
+		AbilitiesState->IsInvincible = OwnerIsCasting;
 	}
 }
 
@@ -101,8 +108,8 @@ void UWhiteBarrier::CheckIfOwnerIsUnderEffect()
 	}
 
 	if (AbilitiesState != nullptr) {
-		AbilitiesState->CharacterIsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
-		AbilitiesState->CharacterIsInvincible = OwnerIsCasting;
+		AbilitiesState->IsUnderWhiteBarrierEffect = OwnerIsUnderEffect;
+		AbilitiesState->IsInvincible = OwnerIsCasting;
 	}
 }
 
