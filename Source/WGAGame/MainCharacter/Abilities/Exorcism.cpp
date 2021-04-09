@@ -6,10 +6,11 @@
 #include "GameFramework/Character.h"
 #include "Components/CapsuleComponent.h"
 #include "DrawDebugHelpers.h"
+#include "Enemy.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values for this component's properties
 UExorcism::UExorcism()
-	: bWasActivated(false)
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -20,64 +21,66 @@ UExorcism::UExorcism()
 void UExorcism::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	TimeSinceLastActivation += DeltaTime;
-
-	if (TimeSinceLastActivation >= ConfigurationData->ExorcismConfiguration.Cooldown) bWasActivated = false;
 }
 
-void UExorcism::ApplyEffect()
+void UExorcism::Initialize(UAbilitiesConfig* Config)
 {
-	if (TimeSinceLastActivation <= ConfigurationData->ExorcismConfiguration.Cooldown && bWasActivated) return;
+	ConfigurationData = Config;
+	Owner             = Cast<ACharacter>(GetOwner());
+}
 
-	const float ZoneLength = ConfigurationData->ExorcismConfiguration.Range;
-	const float ZoneRadius = ConfigurationData->ExorcismConfiguration.SweepShapeRadius;
-	
-	FCollisionShape EffectiveZone = FCollisionShape::MakeSphere(ZoneRadius);
+void UExorcism::Place(FVector ExorcismVector)
+{
+	FVector Location = Owner->GetActorLocation();
+
+	FActorSpawnParameters SpawnParams;
+
+	FTransform Transform(ExorcismVector.Rotation(),
+	                     Location + ExorcismVector * ConfigurationData->ExorcismConfiguration.Length,
+	                     FVector(10.0f, 10.0f, 0.025f));
+
+	ExorcismObjectRef
+		= GetWorld()->SpawnActor<AExorcismVisual>(ExorcismVisual, Transform, SpawnParams);
+
+	FVector BoxExtent(ConfigurationData->ExorcismConfiguration.Length,
+	                  ConfigurationData->ExorcismConfiguration.Width,
+	                  Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
+	FCollisionShape ExorcismZone = FCollisionShape::MakeBox(BoxExtent);
 
 	TArray<FHitResult> HitsInfo;
 	HitsInfo.SetNum(40);
 
-	FVector SweepStart = Owner->GetActorTransform().TransformPosition(FVector(0.0f, 0.0f, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight() / 2));
-	FVector SweepEnd   = Owner->GetActorTransform().TransformPosition(FVector(0.0f, ZoneLength, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight() / 2));
-    
-	if (ConfigurationData->ExorcismConfiguration.Debug)
-		for (int i = 0; i < 3; i++)
-			DrawDebugSphere(GetWorld(),
-						 Owner->GetActorTransform().TransformPosition(FVector(0.0f, i * ZoneLength / 2, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight() / 2)),
-						 ZoneRadius,
-						 50,
-						 FColor::Purple,
-						 true);
-		
-	if (GetWorld()->SweepMultiByChannel(HitsInfo, SweepStart, SweepEnd, FQuat::Identity, ECC_Magic, EffectiveZone))
+	FVector SweepStart = Owner->GetActorTransform().TransformPosition(
+		FVector(0.0f, 0.0f, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()));
+	FVector& SweepEnd = SweepStart;
+
+	if (GetWorld()->SweepMultiByChannel(HitsInfo, SweepStart, SweepEnd, FQuat::Identity, ECC_Weapon, ExorcismZone))
 	{
 		FDamageEvent DamageEvent;
-		
-		for (auto& Hit : HitsInfo)
-		{
-			if(Hit.Actor != nullptr && Hit.Actor->CanBeDamaged())
-			{
-				if(Hit.Actor->TakeDamage(ConfigurationData->ExorcismConfiguration.Damage,
-                                         DamageEvent,
-                                         Owner->GetController(),
-                                         const_cast<ACharacter*>(Owner)) == 0)
-				{
-					AbilitiesState->NumberOfEnemiesKilledByExorcism++;		
-				}
 
-				if (ConfigurationData->ExorcismConfiguration.Debug && GEngine)
-					GEngine->AddOnScreenDebugMessage(
-                        -1,
-                        5.f,
-                        FColor::Green,
-                        FString::Printf(TEXT("Hit Result: %s"),
-                        *Hit.Actor->GetName()));
+		for (auto& HitResult : HitsInfo)
+		{
+			if (HitResult.Actor != nullptr && HitResult.Actor->CanBeDamaged())
+			{
+				ACharacter* HitCharacter = Cast<ACharacter>(HitResult.Actor);
+
+				if (HitCharacter != nullptr && HitCharacter->GetClass()->IsChildOf(AEnemy::StaticClass()))
+				{
+					HitCharacter->TakeDamage(ConfigurationData->ExorcismConfiguration.Damage,
+					                         DamageEvent,
+					                         nullptr,
+					                         Owner);
+
+					if (ConfigurationData->ExorcismConfiguration.Debug && GEngine)
+						GEngine->AddOnScreenDebugMessage(
+							-1,
+							5.f,
+							FColor::Green,
+							FString::Printf(TEXT("Hit Result: %s"),
+							                *HitCharacter->GetName()));
+				}
 			}
 		}
 	}
-
-	TimeSinceLastActivation = 0.0f;
-	bWasActivated = true;
 }
 

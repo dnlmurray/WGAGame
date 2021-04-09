@@ -35,18 +35,14 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool IsCharacterUnderEffect() const { return OwnerIsUnderEffect; }
+	
+	UFUNCTION(BlueprintCallable)
+    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State);
 
+public:	
 	// Visual representation
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
 	TSubclassOf<AWhiteBarrierVisual> WhiteBarrierObject;
-
-	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State)
-	{
-		ConfigurationData = Config;
-		AbilitiesState    = State;
-		Owner             = Cast<ACharacter>(GetOwner());
-	}
 	
 private:
 	// Removes white barrier

@@ -363,6 +363,10 @@
 		{
 			"Name": "SoundUtilities",
 			"Enabled": true
+		},
+		{
+			"Name": "ApexDestruction",
+			"Enabled": true
 		}
 	]
 }

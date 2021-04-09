@@ -3,15 +3,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "GameFramework/Character.h"
 #include "AbilitiesConfig.h"
-#include "AbilitiesState.h"
 #include "Ability.h"
 
 #include "Impulse.generated.h"
 
-#define ECC_Magic ECollisionChannel::ECC_GameTraceChannel2
+#define ECC_Weapon ECollisionChannel::ECC_GameTraceChannel1
 
 UCLASS()
 class AImpulseVisual : public AActor
@@ -31,26 +29,21 @@ public:
 	UImpulse();
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config)
-	{ 
-		ConfigurationData = Config;
-		Owner = Cast<ACharacter>(GetOwner());
-	}
+    void Initialize(UAbilitiesConfig* Config);
 
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Applies the effect to every enemy in the area
 	UFUNCTION(BlueprintCallable)
-    void ApplyEffect();
+    void Place();
 
+public:
 	// Visual representation
 	UPROPERTY(EditDefaultsOnly,Category="ActorSpawning")
-	TSubclassOf<AImpulseVisual> ImpulseVisualObject;
+	TSubclassOf<AImpulseVisual> ImpulseVisual;
 
 private:
 	UPROPERTY()
-	AImpulseVisual*         VisualObjectRef;
-	float                   TimeSinceLastActivation;
-	bool                    bWasActivated;
+	AImpulseVisual*         ImpulseObjectRef;
 };

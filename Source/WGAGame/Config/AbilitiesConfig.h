@@ -60,6 +60,19 @@ struct FWeaponAttackConfiguration
 };
 
 USTRUCT(BlueprintType)
+struct FDashConfiguration
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Strength;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Cooldown;
+};
+
+
+USTRUCT(BlueprintType)
 struct FWhiteBarrierConfiguration
 {
 	GENERATED_BODY()
@@ -78,6 +91,9 @@ struct FWhiteBarrierConfiguration
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float HealthGainPerKill;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Cooldown;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
     bool Debug;
@@ -89,26 +105,29 @@ struct FExorcismConfiguration
 	GENERATED_BODY()
 	
     UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Range;
+	float Length;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float SweepShapeRadius;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Cooldown;
+	float Width;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Damage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithGain;
+	float FaithGainPerKill;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HealthGainPerKill;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Cooldown;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
     bool Debug;
 };
 
 USTRUCT(BlueprintType)
-struct FImpulseConfiguration
+struct FSkyImpulseConfiguration
 {
 	GENERATED_BODY()
 	
@@ -119,17 +138,30 @@ struct FImpulseConfiguration
 	float Damage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float PushImpulse;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Cooldown;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithGain;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float PushVelocity;
-
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool Debug;
 };
+
+USTRUCT(BlueprintType)
+struct FPureDeathConfiguration
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float ChargeTime;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FaithGainPerKill;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float Cooldown;
+};
+
 
 UCLASS(BlueprintType)
 class WGAGAME_API UAbilitiesConfig : public UDataAsset
@@ -145,6 +177,9 @@ public:
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FWeaponAttackConfiguration WeaponAttackConfiguration;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FDashConfiguration DashConfiguration;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FWhiteBarrierConfiguration WhiteBarrierConfiguration; 
@@ -153,5 +188,8 @@ public:
 	FExorcismConfiguration ExorcismConfiguration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FImpulseConfiguration ImpulseConfiguration;
+	FSkyImpulseConfiguration SkyImpulseConfiguration;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	FPureDeathConfiguration PureDeathConfiguration;
 }; 

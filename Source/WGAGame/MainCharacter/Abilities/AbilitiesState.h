@@ -14,12 +14,18 @@ class WGAGAME_API UAbilitiesState : public UActorComponent
 public:
 	// Sets default values for this component's properties
 	UAbilitiesState()
-		: NumberOfEnemiesKilledByExorcism(0)
-		, CharacterIsUnderWhiteBarrierEffect(false)
-		, CharacterIsInvincible(false)
+		: IsUnderWhiteBarrierEffect(false)
+		, IsInvincible(false)
+		, IsUnderPureDeathEffect(false)
 	{ }
 
-	int   NumberOfEnemiesKilledByExorcism;
-	bool  CharacterIsUnderWhiteBarrierEffect;
-	bool  CharacterIsInvincible;
+	bool  IsUnderWhiteBarrierEffect;
+	
+	bool  IsInvincible;
+	
+	UPROPERTY(BlueprintReadWrite)
+	bool  IsUnderPureDeathEffect;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool  IsUnderExorcismEffect;
 };

@@ -30,7 +30,7 @@ void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	// 	FString::Printf(TEXT("faith decrease is enabled: %s"), GetFaithDecreasingStatus() ? TEXT("true") : TEXT("false")));
 	//
 	//
-	if (bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+	if (bFaithDecreasingIsEnabled && !AbilitiesState->IsUnderWhiteBarrierEffect)
 	{
 		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerSecond * DeltaTime);
 	}
@@ -39,7 +39,7 @@ void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 // faith decrease on kill
 void UFaithComponent::DecreasePerKill()
 {
-	if (bFaithDecreasingIsEnabled && !AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
+	if (bFaithDecreasingIsEnabled && !AbilitiesState->IsUnderWhiteBarrierEffect)
 	{
 		GEngine->AddOnScreenDebugMessage(
 		-1,

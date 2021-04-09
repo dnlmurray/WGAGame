@@ -34,5 +34,5 @@ protected:
 	UPROPERTY()
 	UAbilitiesState* AbilitiesState;
 	UPROPERTY()
-	ACharacter const* Owner;
+	ACharacter* Owner;
 };

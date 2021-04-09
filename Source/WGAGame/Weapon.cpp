@@ -79,10 +79,16 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
-					if (AbilitiesState != nullptr && FaithComponent != nullptr &&
-						AbilitiesState->CharacterIsUnderWhiteBarrierEffect)
-					{	
-						FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+					if (AbilitiesState != nullptr && FaithComponent != nullptr)
+					{
+						if (AbilitiesState->IsUnderWhiteBarrierEffect)
+						{	
+							FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+						}
+						if (AbilitiesState->IsUnderPureDeathEffect)
+						{
+							FaithComponent->DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerKill);
+						}
 					}
 
 					HitResult.Actor->TakeDamage(WeaponDamage,

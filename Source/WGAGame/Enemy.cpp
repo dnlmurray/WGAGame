@@ -51,8 +51,6 @@ void AEnemy::OnEnemyDeath()
 	assert(EnemyWeapon != nullptr);
 
 	SpawnManager->CurrentEnemyNumber --;
-	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
-	GameMode->OnEnemyKill();
 	
 	Destroy();
 }
