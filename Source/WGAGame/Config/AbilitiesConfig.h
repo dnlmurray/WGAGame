@@ -162,6 +162,36 @@ struct FPureDeathConfiguration
 	float Cooldown;
 };
 
+USTRUCT(BlueprintType)
+struct FAnimSpeed
+{
+	GENERATED_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float AttackSpeed_1;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float AttackSpeed_2;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float AttackSpeed_3;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float HitAnimSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float WhiteBarrierSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float SkyImpulseSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float PureDeathSpeed;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float ExorcismSpeed;
+};
+
 
 UCLASS(BlueprintType)
 class WGAGAME_API UAbilitiesConfig : public UDataAsset
