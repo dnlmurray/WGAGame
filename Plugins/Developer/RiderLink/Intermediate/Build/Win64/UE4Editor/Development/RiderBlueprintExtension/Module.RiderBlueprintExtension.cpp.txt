@@ -1,289 +1,291 @@
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Definitions.RiderBlueprintExtension.h
-D:/Git/WGAGame/Plugins/Developer/RiderLink/Source/RiderBlueprintExtension/Private/BlueprintProvider.cpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public\BlueprintProvider.hpp
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Async/Async.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditor.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabFactory.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabManager.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditorModule.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowCentricApplication.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Developer/Merge/Public/Merge.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageEndpointBuilder.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Messaging\Public\IMessagingModule.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageHandlers.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Kismet2/KismetEditorUtilities.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Toolkits/AssetEditorManager.h
-D:/Git/WGAGame/Plugins/Developer/RiderLink/Source/RiderBlueprintExtension/Private/RiderBlueprintExtension.cpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public\RiderBlueprintExtension.hpp
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\Windows.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\sdkddkver.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\excpt.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\windef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\minwindef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winnt.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\kernelspecs.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\basetsd.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\guiddef.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack8.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\apiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\ktmtypes.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winbase.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\apisetcconv.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\minwinbase.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\apiquery2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\processenv.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\fileapifromapp.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\fileapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\debugapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\utilapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\handleapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\errhandlingapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\fibersapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\namedpipeapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\profileapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\heapapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\ioapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\synchapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\interlockedapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\processthreadsapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\sysinfoapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\memoryapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\enclaveapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\threadpoollegacyapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\threadpoolapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\jobapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\jobapi2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\wow64apiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\libloaderapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\securitybaseapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\namespaceapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\systemtopologyapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\processtopologyapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\securityappcontainer.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\realtimeapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\winerror.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\timezoneapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\wingdi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack1.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack4.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winuser.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\pshpack2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\poppack.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\tvout.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winnls.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\datetimeapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\stringapiset.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winnls.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\wincon.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\wincontypes.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\consoleapi.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\consoleapi2.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\consoleapi3.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winver.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\verrsrc.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winreg.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\reason.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\winnetwk.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\wnnc.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared\stralign.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\imm.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um\ime_cmodes.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol/RdEditorModel/RdEditorModel.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Protocol.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IProtocol.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdDynamic.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RName.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\string
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Serializers.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/RdId.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Buffer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/DateTime.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_util.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\erase_if.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\gen_util.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/allocator.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\overloaded.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\shared_function.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/to_string.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\thread
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\chrono
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\ratio
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\sstream
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\process.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\corecrt_startup.h
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\math.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\vcruntime_startup.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\future
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\condition_variable
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\mutex
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\ppltasks.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\pplwin.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\pplinterface.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\ppltaskscheduler.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\crtdefs.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\pplcancellation_token.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\locale
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\xlocbuf
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\xlocmes
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\xlocmon
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\xloctime
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\codecvt
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/wrapper.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_traits.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/Void.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\unordered_map
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\cassert
-C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt\assert.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/list.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\hashing.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ISerializable.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Identities.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IUnknownInstance.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/RdAny.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\DefaultAbstractDeclaration.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/unordered_map.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IWire.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/base/interfaces.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/Lifetime.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\map
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\xtree
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IRdReactive.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdBindable.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdWireable.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/Property.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IProperty.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalX.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\IPropertyBase.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/SequentialLifetimes.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeDefinition.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\INCLUDE\regex
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern/InternRoot.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdReactiveBase.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdBindableBase.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\guards.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternScheduler.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedAnySerializer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSignal.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Polymorphic.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdProperty.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdPropertyBase.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdList.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableList.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableList.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\viewable_collections.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSet.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableSet.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableSet.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdMap.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableMap.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableMap.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/ISerializersOwner.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/NullableSerializer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/AbstractPolymorphic.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\framework_traits.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ArraySerializer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedSerializer.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext/RdExtBase.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext\ExtWire.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdCall.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTask.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskImpl.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskResult.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SynchronousScheduler.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTask.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTaskImpl.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdEndpoint.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdSymmetricCall.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/enum.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel\../instantiationsRdEditorProtocol.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/UnrealLogEvent.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../instantiationsLibrary.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/LogMessageInfo.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\UE4TypesMarshallers.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/StringRange.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/BlueprintReference.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/UClass.Generated.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/PlayState.Generated.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\RiderLink.hpp
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\RdConnection.hpp
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SingleThreadScheduler.h
-D:\Git\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base/SingleThreadSchedulerBase.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
-C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\IAssetRegistry.generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Definitions.RiderBlueprintExtension.h
+D:/WGA/WGAGame/Plugins/Developer/RiderLink/Source/RiderBlueprintExtension/Private/BlueprintProvider.cpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public\BlueprintProvider.hpp
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Async/Async.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditor.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabFactory.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowTabManager.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\BlueprintEditorModule.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\Kismet\Public\WorkflowOrientedApp/WorkflowCentricApplication.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Developer/Merge/Public/Merge.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageEndpointBuilder.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Messaging\Public\IMessagingModule.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\MessagingCommon\Public\MessageHandlers.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Kismet2/KismetEditorUtilities.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Editor\UnrealEd\Public\Toolkits/AssetEditorManager.h
+D:/WGA/WGAGame/Plugins/Developer/RiderLink/Source/RiderBlueprintExtension/Private/RiderBlueprintExtension.cpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderBlueprintExtension\Public\RiderBlueprintExtension.hpp
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/WindowsHWrapper.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/MinWindows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\Windows.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\sdkddkver.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\excpt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\windef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\minwindef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnt.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\kernelspecs.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\basetsd.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\guiddef.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack8.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\ktmtypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\apisetcconv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\minwinbase.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\apiquery2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processenv.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapifromapp.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\debugapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\utilapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\handleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\errhandlingapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\fibersapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namedpipeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\profileapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\heapapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ioapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\synchapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\interlockedapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processthreadsapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\sysinfoapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\memoryapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\enclaveapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoollegacyapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\threadpoolapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\jobapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wow64apiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\libloaderapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securitybaseapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\namespaceapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\systemtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\processtopologyapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\securityappcontainer.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\realtimeapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\winerror.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\timezoneapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wingdi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack1.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack4.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winuser.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\pshpack2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\poppack.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\tvout.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\datetimeapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\stringapiset.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnls.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincon.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\wincontypes.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi2.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\consoleapi3.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winver.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\verrsrc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winreg.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\reason.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\winnetwk.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\wnnc.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared\stralign.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\imm.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um\ime_cmodes.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol/RdEditorModel/RdEditorModel.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Protocol.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IProtocol.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdDynamic.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RName.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cctype
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\rd_framework_export.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Serializers.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/RdId.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Buffer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/DateTime.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ctime
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_util.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\erase_if.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\gen_util.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/allocator.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\overloaded.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util\shared_function.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/to_string.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\thread
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\chrono
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ratio
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\process.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup.h
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vcruntime_startup.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\sstream
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\future
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\condition_variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\mutex
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ppltasks.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\pplwin.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\pplinterface.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ppltaskscheduler.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\crtdefs.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\pplcancellation_token.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\locale
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xlocbuf
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xlocmes
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xlocmon
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xloctime
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\codecvt
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/wrapper.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/core_traits.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\types/Void.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/spdlog.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/registry.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\unordered_map
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/logger.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/backtracer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg_buffer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/circular_q.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/version.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
+C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/list.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\hashing.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ISerializable.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\protocol/Identities.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IUnknownInstance.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/RdAny.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization\DefaultAbstractDeclaration.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/unordered_map.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/base/IScheduler.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IWire.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/base/interfaces.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/Lifetime.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\map
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xtree
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/IRdReactive.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdBindable.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base\IRdWireable.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/Property.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IProperty.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalX.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\SignalCookie.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\IPropertyBase.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime/SequentialLifetimes.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeDefinition.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\regex
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern/InternRoot.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdReactiveBase.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdBindableBase.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\guards.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\intern\InternScheduler.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedAnySerializer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/SerializationCtx.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSignal.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/Polymorphic.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdProperty.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/RdPropertyBase.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdList.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableList.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableList.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base\viewable_collections.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdSet.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableSet.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableSet.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\impl/RdMap.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive/ViewableMap.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\reactive\base/IViewableMap.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\base/ISerializersOwner.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/NullableSerializer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/AbstractPolymorphic.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\util\framework_traits.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/ArraySerializer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\serialization/InternedSerializer.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext/RdExtBase.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\ext\ExtWire.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdCall.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTask.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskImpl.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\RdTaskResult.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SynchronousScheduler.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTask.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task\WiredRdTaskImpl.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdEndpoint.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\task/RdSymmetricCall.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\util/enum.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\RdEditorProtocol\RdEditorModel\../instantiationsRdEditorProtocol.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/UnrealLogEvent.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../instantiationsLibrary.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/LogMessageInfo.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\UE4TypesMarshallers.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/StringRange.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/BlueprintReference.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/UClass.Generated.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\Model\Library\UE4Library\../UE4Library/PlayState.Generated.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\RiderLink.hpp
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RiderLink\Public\RdConnection.hpp
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/AllowWindowsPlatformTypes.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PreWindowsApi.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler/SingleThreadScheduler.h
+D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_framework_cpp\src\main\scheduler\base/SingleThreadSchedulerBase.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/PostWindowsApi.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\Core\Public\Windows/HideWindowsPlatformTypes.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\AssetRegistryModule.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\Misc/AssetRegistryInterface.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\AssetRegistry\Public\IAssetRegistry.h
+D:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AssetRegistry\IAssetRegistry.generated.h

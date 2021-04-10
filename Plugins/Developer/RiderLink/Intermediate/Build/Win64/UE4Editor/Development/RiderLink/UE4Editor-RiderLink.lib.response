@@ -6,8 +6,8 @@
 /NAME:"UE4Editor-RiderLink.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\Git\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\Core\SharedPCH.Core.RTTI.ShadowErrors.h.obj"
-"D:\Git\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Module.RiderLink.cpp.obj"
-"D:\Git\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Default.rc2.res"
-/OUT:"D:\Git\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\UE4Editor-RiderLink.lib"
+"D:\WGA\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\Core\SharedPCH.Core.RTTI.ShadowErrors.h.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Module.RiderLink.cpp.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\Default.rc2.res"
+/OUT:"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLink\UE4Editor-RiderLink.lib"
 /INCLUDE:IMPLEMENT_MODULE_RiderLink
