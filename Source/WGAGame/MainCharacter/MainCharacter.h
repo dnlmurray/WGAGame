@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+
+#include "MainCharacterConfig.h"
 #include "WGACharacter.h"
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
@@ -41,4 +43,8 @@ protected:
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnPlayerDeath() const;
+
+public:
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
+	UMainCharacterConfig* ConfigInst;
 };

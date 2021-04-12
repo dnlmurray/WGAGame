@@ -3,11 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "AbilitiesConfig.h"
-#include "AbilitiesState.h"
-#include "FaithComponent.h"
 
+#include "FaithComponent.h"
+#include "Components/ActorComponent.h"
 
 #include "Weapon.generated.h"
 
@@ -43,7 +41,7 @@ public:
     void DisableDamageApplying();
 
 	UFUNCTION(BlueprintCallable)
-    void Initialize(UAbilitiesConfig* Config, UAbilitiesState* State,  UFaithComponent* Faith);
+    void Initialize(UBaseConfig* Config, UAbilitiesState* State,  UFaithComponent* Faith);
 	// Creates nodes on the line between StartLocation and EndLocation
 	UFUNCTION(BlueprintCallable)
     void SetNodes(const FVector& StartLocation, const FVector& EndLocation, int32 NumberOfNodes);
@@ -100,7 +98,7 @@ private:
 	
 	// General configuration
 	UPROPERTY()
-	UAbilitiesConfig const* ConfigurationData;
+	UBaseConfig const* ConfigurationData;
 
 	// External state component
 	UPROPERTY()

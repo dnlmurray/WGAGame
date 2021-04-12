@@ -30,10 +30,9 @@ void AMainCharacter::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActo
 float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
                                  AActor* DamageCauser)
 {
-	UActorComponent* WeaponComponent = DamageCauser->GetComponentByClass(UWeapon::StaticClass());
+	// UActorComponent* WeaponComponent = DamageCauser->GetComponentByClass(UWeapon::StaticClass());
 
-	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
-		DamageCauser->GetClass()->IsChildOf((AEnemy::StaticClass())))
+	if (DamageCauser->GetClass()->IsChildOf(AEnemy::StaticClass()))
 	{
 		OnHitReaction(DamageAmount);
 	}

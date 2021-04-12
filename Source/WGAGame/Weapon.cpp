@@ -4,6 +4,7 @@
 #include "Weapon.h"
 #include "DrawDebugHelpers.h"
 #include "Enemy.h"
+#include "MainCharacter.h"
 #include "GameFramework/Character.h"
 
 // Make sure this redefenition matches the corresponding one in the DefaultEngine.ini file
@@ -37,7 +38,7 @@ void UWeapon::BeginPlay()
 	WeaponVisual->AttachToComponent(Owner->GetMesh(), AttachmentTransformRules, FName("WeaponSocket"));
 }
 
-void UWeapon::Initialize(UAbilitiesConfig* Config, UAbilitiesState* State, UFaithComponent* Faith)
+void UWeapon::Initialize(UBaseConfig* Config, UAbilitiesState* State, UFaithComponent* Faith)
 {
 	
 	ConfigurationData = Config;
@@ -81,13 +82,14 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				{
 					if (AbilitiesState != nullptr && FaithComponent != nullptr)
 					{
+						AMainCharacter* MC = Cast<AMainCharacter>(HitCharacter);
 						if (AbilitiesState->IsUnderWhiteBarrierEffect)
 						{	
-							FaithComponent->IncreaseFaith(ConfigurationData->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
+							FaithComponent->IncreaseFaith(MC->ConfigInst->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
 						}
 						if (AbilitiesState->IsUnderPureDeathEffect)
 						{
-							FaithComponent->DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerKill);
+							FaithComponent->DecreaseFaith(MC->ConfigInst->FaithConfiguration.FaithDecreasePerKill);
 						}
 					}
 
