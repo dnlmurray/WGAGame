@@ -48,7 +48,8 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 		bIsActivated = true;
 
 		EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
-		
+		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, FString::Printf(TEXT("enemies to spawn: %d"), EnemiesLeftToSpawn));
+
 		StateNotifier.Broadcast(bIsActivated);
 
 		if (EnemiesLeftToSpawn > 0)
@@ -122,6 +123,8 @@ void ASpawnManager::SpawnOnPoint(AActor* Point)
 
 void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 {
+	GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, TEXT("spawned enemy"));
+
 	auto SpawnLocation = Point->GetActorLocation();
 	auto SpawnRotation = Point->GetActorRotation();
 	
