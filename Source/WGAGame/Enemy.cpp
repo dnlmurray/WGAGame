@@ -1,14 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "Enemy.h"
 
 #include <cassert>
 
-
 #include "MainCharacter.h"
 #include "Weapon.h"
-#include "WGAGameGameModeBase.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -50,7 +47,9 @@ void AEnemy::OnEnemyDeath()
 	assert(SpawnManager != nullptr);
 	assert(EnemyWeapon != nullptr);
 
-	SpawnManager->CurrentEnemyNumber --;
+	const int i = rand() % static_cast<int>(SpawnManager->EnemiesClassesToSpawn.Num() + 1);
+
+	SpawnManager->SpawnOnPoint(SpawnManager->SpawnPoints[i]);
 	
 	Destroy();
 }

@@ -11,10 +11,11 @@
 
 // Sets default values
 ASpawnManager::ASpawnManager()
-	: WavesNumber(1)
-	, CurrentEnemyNumber(0)
-	, CurrentWaveNumber(0)
-	, bIsActivated(false)
+: MaxEnemyNumber(0)
+, MinEnemyNumber(0)
+, EnemiesLeftToSpawn(0)
+, bIsActivated(false)
+, bWasActivatedInPast(false)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -28,91 +29,109 @@ void ASpawnManager::BeginPlay()
 	Super::BeginPlay();
 
 	assert(EnemiesClassesToSpawn.Num() >= 1);
-	assert(EnemiesClassesToSpawn.Num() == EnemiesClassesPercents.Num());
+	assert(EnemiesClassesToSpawn.Num() == EnemiesClassesPercents.Num() == EnemiesMinNumber.Num());
 
-	float sum = 0;
-	for (float p : EnemiesClassesPercents)
+	int sum = 0;
+	for (int& num : EnemiesMinNumbers)
 	{
-		sum += p;
+		sum += num;
 	}
 
-	assert(sum == 1.f);
-}
-
-// Called every frame
-void ASpawnManager::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-	if (bIsActivated && CurrentEnemyNumber == 0)
-	{
-		if (CurrentWaveNumber < WavesNumber)
-		{
-			CurrentWaveNumber ++;
-			SpawnWave();
-		}
-		else
-		{
-			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("All waves clear!"));
-			bIsActivated = false;
-			StateNotifier.Broadcast(bIsActivated);
-		}
-	}
-
+	assert(sum <= EnemiesLeftToSpawn);
 }
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
 {
-	if (!bIsActivated && CurrentWaveNumber == 0)
-	{	
+	if (!bIsActivated && !bWasActivatedInPast)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enter spawner"));
 		bIsActivated = true;
 
-		CurrentWaveNumber = 1; // spawn first wave
-
+		EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
+		
 		StateNotifier.Broadcast(bIsActivated);
 
-		if (CurrentWaveNumber <= WavesNumber)
+		if (EnemiesLeftToSpawn > 0)
 		{
-			SpawnWave();
+			SpawnInitial();
 		}
 	}
 }
 
-void ASpawnManager::SpawnWave()
+void ASpawnManager::CheckSpawnerState()
 {
-	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green,
-	//                                FString::Printf(TEXT("Begin wave number %d"), CurrentWaveNumber));
-	
+	if (bIsActivated && EnemiesLeftToSpawn == 0)
+	{
+		bIsActivated = false;
+		bWasActivatedInPast = true;
+		StateNotifier.Broadcast(bIsActivated);
+	}
+}
+
+
+void ASpawnManager::SpawnInitial()
+{	
 	for (auto& point : SpawnPoints)
 	{
-		// choosing an enemy to spawn randomly
+		SpawnOnPoint(point);
+	}
+}
 
+void ASpawnManager::SpawnOnPoint(AActor* Point)
+{
+	if (EnemiesLeftToSpawn > 0)
+	{
+		bool SpawnedOnPoint = false;
+		
 		float val = static_cast<float>(rand())/ RAND_MAX;
 
-		// we have at least one enemy to spawn
-		float sum = 0;
+		// first doing an iteration over essentials mobs
 		
-		for (size_t i = 0; i < EnemiesClassesPercents.Num(); i++)
+		int sum = 0;
+
+		for (size_t i = 0; i < EnemiesMinNumbers.Num(); i++)
 		{
-			sum += EnemiesClassesPercents[i];
-			if (val < sum)
+			sum += EnemiesMinNumbers[i];
+			if (val < (sum/EnemiesLeftToSpawn))
 			{
-				SpawnEnemy(EnemiesClassesToSpawn[i], point->GetActorLocation(), point->GetActorRotation());
+				SpawnEnemy(EnemiesClassesToSpawn[i], Point);
+				SpawnedOnPoint = true;
+				EnemiesMinNumbers[i] --;
 				break;
+			}
+		}
+
+		// random mobs
+		
+		if (!SpawnedOnPoint)
+		{
+			float percent_sum = 0;
+		
+			for (size_t i = 0; i < EnemiesPercents.Num(); i++)
+			{
+				percent_sum += EnemiesPercents[i];
+				if (val < percent_sum)
+				{
+					SpawnEnemy(EnemiesClassesToSpawn[i], Point);
+					break;
+				}
 			}
 		}
 	}
 }
 
-void ASpawnManager::SpawnEnemy(UClass* EnemyClass, FVector SpawnLocation, FRotator SpawnRotation)
+void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 {
+	auto SpawnLocation = Point->GetActorLocation();
+	auto SpawnRotation = Point->GetActorRotation();
+	
 	const FTransform SpawnLocAndRotation(SpawnRotation, SpawnLocation, FVector::OneVector);
 	AEnemy* SpawnedEnemy = GetWorld()->SpawnActorDeferred<AEnemy>(EnemyClass, SpawnLocAndRotation);
 
 	assert(SpawnedEnemy != nullptr);
 	
 	SpawnedEnemy->SetSpawnManager(this);
-	CurrentEnemyNumber++;
+	EnemiesLeftToSpawn --;
 	SpawnedEnemy->FinishSpawning(SpawnLocAndRotation);
 	SpawnedEnemy->SetActorHiddenInGame(true);
 }

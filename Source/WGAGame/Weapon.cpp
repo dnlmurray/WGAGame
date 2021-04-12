@@ -82,7 +82,7 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				{
 					if (AbilitiesState != nullptr && FaithComponent != nullptr)
 					{
-						AMainCharacter* MC = Cast<AMainCharacter>(HitCharacter);
+						AMainCharacter* MC = Cast<AMainCharacter>(Owner);
 						if (AbilitiesState->IsUnderWhiteBarrierEffect)
 						{	
 							FaithComponent->IncreaseFaith(MC->ConfigInst->WhiteBarrierConfiguration.FaithGainPerStandartAttack);

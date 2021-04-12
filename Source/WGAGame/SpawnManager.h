@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "GameFramework/Actor.h"
+#include "Containers/Map.h"
 #include "SpawnManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnManagerStateNotifier, bool, IsAction);
@@ -22,21 +23,22 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+public:
+	
 	UFUNCTION()
 	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 
 	UFUNCTION(BlueprintCallable)
 	bool IsActivated() { return bIsActivated; }
+
+	void SpawnOnPoint(AActor* Point);
 	
 private:
+	void CheckSpawnerState();
 
-	void SpawnWave();
+	void SpawnInitial();
 
-	void SpawnEnemy(UClass* EnemyClass, FVector SpawnLocation, FRotator SpawnRotation);
+	void SpawnEnemy(UClass* EnemyClass, AActor* Point);
 
 public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
@@ -46,20 +48,24 @@ public:
 	TArray<UClass*> EnemiesClassesToSpawn;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<float> EnemiesClassesPercents;
+	TArray<float> EnemiesPercents;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<int> EnemiesMinNumbers;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int WavesNumber;
+	int MaxEnemyNumber;
 
-	UPROPERTY(VisibleAnywhere)
-	int CurrentEnemyNumber;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int MinEnemyNumber;
 
 	FSpawnManagerStateNotifier StateNotifier;
+	
 private:
-	// Number of enemies spawned in current wave
 
-	UPROPERTY(VisibleAnywhere)
-	int CurrentWaveNumber;
-
+	int EnemiesLeftToSpawn;
+	
 	bool bIsActivated;
+
+	bool bWasActivatedInPast;
 };
