@@ -8,6 +8,7 @@
 
 
 #include "Enemy.h"
+#include "WGAGameGameModeBase.h"
 
 // Sets default values
 ASpawnManager::ASpawnManager()
@@ -44,6 +45,9 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 {
 	if (!bIsActivated && !bWasActivatedInPast)
 	{
+		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+		GameMode->SetSpawnManager(this);
+		
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enter spawner"));
 		bIsActivated = true;
 
@@ -137,4 +141,13 @@ void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 	EnemiesLeftToSpawn --;
 	SpawnedEnemy->FinishSpawning(SpawnLocAndRotation);
 	SpawnedEnemy->SetActorHiddenInGame(true);
+}
+
+void ASpawnManager::Reset()
+{
+	EnemiesLeftToSpawn = 0;
+	bIsActivated = false;
+	bWasActivatedInPast = false;
+	ResetNotifier.Broadcast();
+	StateNotifier.Broadcast(bIsActivated);
 }

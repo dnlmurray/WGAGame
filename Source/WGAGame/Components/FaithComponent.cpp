@@ -4,7 +4,7 @@
 #include "FaithComponent.h"
 
 // Sets default values for this component's properties
-UFaithComponent::UFaithComponent()
+UFaithComponent::UFaithComponent(): IsDead(false)
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -26,10 +26,6 @@ void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue,
-	// 	FString::Printf(TEXT("faith decrease is enabled: %s"), GetFaithDecreasingStatus() ? TEXT("true") : TEXT("false")));
-	//
-	//
 	if (bFaithDecreasingIsEnabled && !AbilitiesState->IsUnderWhiteBarrierEffect)
 	{
 		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerSecond * DeltaTime);
@@ -52,14 +48,15 @@ void UFaithComponent::DecreasePerKill()
 	}
 }
 
-void UFaithComponent::OnZeroFaith() const
+void UFaithComponent::OnZeroFaith()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED: 0 FAITH"));
-
-	Owner->OnDeathReaction(this);
+	if (!IsDead) {
+		Owner->OnDeathReaction(this);
+		IsDead = true;
+	}
 }
 
-void UFaithComponent::CheckFaithAmount() const
+void UFaithComponent::CheckFaithAmount()
 {
 	if (FaithValue <= 0)
 	{
@@ -80,6 +77,12 @@ void UFaithComponent::DecreaseFaith(float Faith)
 		FaithValue -= Faith;
 		CheckFaithAmount();
 	}
+}
+
+void UFaithComponent::ResetFaith()
+{
+	FaithValue = MaxFaith;
+	IsDead = false;
 }
 
 void UFaithComponent::Initialize(UMainCharacterConfig* Config, UAbilitiesState* State)

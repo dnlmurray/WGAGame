@@ -9,6 +9,7 @@
 #include "SpawnManager.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnManagerStateNotifier, bool, IsAction);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCheckpointResetNotifier);
 
 UCLASS()
 class WGAGAME_API ASpawnManager : public AActor
@@ -32,14 +33,15 @@ public:
 	bool IsActivated() { return bIsActivated; }
 
 	void SpawnOnPoint(AActor* Point);
-	
+
+	void Reset();
+
 private:
 	void CheckSpawnerState();
 
 	void SpawnInitial();
 
 	void SpawnEnemy(UClass* EnemyClass, AActor* Point);
-
 public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<AActor*> SpawnPoints;
@@ -54,12 +56,20 @@ public:
 	TArray<int> EnemiesMinNumbers;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<int> SpawnPointsThreshes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<int> EnemiesKilledThreshes;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int MaxEnemyNumber;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int MinEnemyNumber;
 
 	FSpawnManagerStateNotifier StateNotifier;
+
+	FCheckpointResetNotifier ResetNotifier;
 	
 private:
 

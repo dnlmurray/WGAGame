@@ -36,6 +36,9 @@ public:
 private:
 	UFUNCTION(BlueprintCallable)
 	void OnEnemyDeath();
+
+	UFUNCTION()
+	void ResetEnemy();
 	
 private:
 	UPROPERTY()

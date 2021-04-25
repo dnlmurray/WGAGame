@@ -4,7 +4,7 @@
 #include "HealthComponent.h"
 
 // Sets default values for this component's properties
-UHealthComponent::UHealthComponent()
+UHealthComponent::UHealthComponent(): IsDead(false)
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
@@ -32,12 +32,15 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 	// ...
 }
 
-void UHealthComponent::OnZeroHealth() const
+void UHealthComponent::OnZeroHealth()
 {
-	Owner->OnDeathReaction(this);
+	if (!IsDead) {
+		Owner->OnDeathReaction(this);
+		IsDead = true;
+	}
 }
 
-void UHealthComponent::CheckHealthAmount() const
+void UHealthComponent::CheckHealthAmount()
 {
 	if (HealthValue <= 0)
 	{
@@ -48,14 +51,6 @@ void UHealthComponent::CheckHealthAmount() const
 void UHealthComponent::IncreaseHealth(float Health)
 {
 	if (Health >= 0) {
-		// GEngine->AddOnScreenDebugMessage(
-  //       -1,
-  //       5.f,
-  //       FColor::Blue,
-  //       TEXT("Faith gain"),
-  //       true,
-  //       FVector2D(1.0f, 1.0f));
-	 //
 		HealthValue = FMath::Clamp(HealthValue + Health, 0.0f, MaxHealth);
 	}
 }
@@ -66,6 +61,12 @@ void UHealthComponent::DecreaseHealth(float Health)
 		HealthValue -= Health;
 		CheckHealthAmount();
 	}
+}
+
+void UHealthComponent::ResetHealth()
+{
+	HealthValue = MaxHealth;
+	IsDead = false;
 }
 
 void UHealthComponent::Initialize(UBaseConfig* Config, UAbilitiesState* State)

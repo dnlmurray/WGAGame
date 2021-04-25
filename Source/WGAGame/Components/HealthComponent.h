@@ -38,11 +38,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void DecreaseHealth(float Health);
-	
-private:
-	void OnZeroHealth() const;
 
-	void CheckHealthAmount() const;
+	UFUNCTION(BlueprintCallable)
+	void ResetHealth();
+private:
+	void OnZeroHealth();
+
+	void CheckHealthAmount();
 
 public:
 	UPROPERTY(BlueprintReadOnly)
@@ -60,4 +62,6 @@ private:
 
 	UPROPERTY()
 	AWGACharacter* Owner;
+
+	bool IsDead;
 };
