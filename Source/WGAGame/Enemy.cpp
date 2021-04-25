@@ -47,10 +47,6 @@ void AEnemy::OnEnemyDeath()
 {
 	assert(SpawnManager != nullptr);
 	assert(EnemyWeapon != nullptr);
-
-	const int i = rand() % static_cast<int>(SpawnManager->EnemiesClassesToSpawn.Num() + 1);
-
-	SpawnManager->SpawnOnPoint(SpawnManager->SpawnPoints[i]);
 	
 	Destroy();
 }

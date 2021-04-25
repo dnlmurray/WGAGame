@@ -17,6 +17,7 @@ ASpawnManager::ASpawnManager()
 , EnemiesLeftToSpawn(0)
 , bIsActivated(false)
 , bWasActivatedInPast(false)
+, bUseSpawnThreshes(false)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -31,6 +32,7 @@ void ASpawnManager::BeginPlay()
 
 	assert(EnemiesClassesToSpawn.Num() >= 1);
 	assert(EnemiesClassesToSpawn.Num() == EnemiesClassesPercents.Num() == EnemiesMinNumber.Num());
+	assert(EnemiesKilledThreshes.Num() == SpawnPointsThreshes.Num());
 
 	int sum = 0;
 	for (int& num : EnemiesMinNumbers)
@@ -39,6 +41,31 @@ void ASpawnManager::BeginPlay()
 	}
 
 	assert(sum <= EnemiesLeftToSpawn);
+
+	for (int i = 0; i < SpawnPointsThreshes.Num(); ++i)
+	{
+		assert(SpawnPointsThreshes[i] <= SpawnPoints.Num());
+		if (i > 0)
+		{
+			assert(SpawnPointsThreshes[i] >= SpawnPointsThreshes[i-1]);
+		}
+	}
+	
+	EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
+
+	for (int i = 0; i < EnemiesKilledThreshes.Num(); ++i)
+	{
+		assert(EnemiesKilledThreshes[i] <= EnemiesLeftToSpawn);
+		if (i > 0)
+		{
+			assert(EnemiesKilledThreshes[i] >= EnemiesKilledThreshes[i-1]);
+		}
+	}
+
+	if (SpawnPointsThreshes.Num() > 0 && EnemiesKilledThreshes.Num() > 0)
+	{
+		bUseSpawnThreshes = true;
+	}
 }
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
@@ -51,9 +78,14 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enter spawner"));
 		bIsActivated = true;
 
-		EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
 		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, FString::Printf(TEXT("enemies to spawn: %d"), EnemiesLeftToSpawn));
 
+		if (bUseSpawnThreshes)
+		{
+			CurrSpawnPointThresh = ThresholdStruct(SpawnPointsThreshes[0], 0, SpawnPointsThreshes.Num()-1);
+			CurrEnemiesKilledThresh = ThresholdStruct(EnemiesKilledThreshes[0], 0, EnemiesKilledThreshes.Num()-1);
+		}
+		
 		StateNotifier.Broadcast(bIsActivated);
 
 		if (EnemiesLeftToSpawn > 0)
@@ -75,10 +107,17 @@ void ASpawnManager::CheckSpawnerState()
 
 
 void ASpawnManager::SpawnInitial()
-{	
-	for (auto& point : SpawnPoints)
+{
+	int SpawnPointsNum = SpawnPoints.Num();
+
+	if (bUseSpawnThreshes && CurrSpawnPointThresh && CurrEnemiesKilledThresh)
 	{
-		SpawnOnPoint(point);
+		SpawnPointsNum = CurrSpawnPointThresh.GetValue();
+	}
+	
+	for (int i = 0; i < SpawnPointsNum; ++i)
+	{
+		SpawnOnPoint(SpawnPoints[i]);
 	}
 }
 
@@ -150,4 +189,11 @@ void ASpawnManager::Reset()
 	bWasActivatedInPast = false;
 	ResetNotifier.Broadcast();
 	StateNotifier.Broadcast(bIsActivated);
+}
+
+void ASpawnManager::SpawnOnRandomPoint()
+{
+	const int i = rand() % static_cast<int>(EnemiesClassesToSpawn.Num() + 1);
+	
+	SpawnOnPoint(SpawnPoints[i]);
 }

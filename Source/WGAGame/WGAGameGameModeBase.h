@@ -32,6 +32,11 @@ public:
 	void SaveCheckpoint(FVector PlayerLocation);
 
 	void SetSpawnManager(ASpawnManager* SM);
+
+	int GetLocationEnemiesKilled() const
+	{
+		return CurrentEnemiesKilled - EnemiesKilledCheckpoint;
+	}
 	
 public:
 	UPROPERTY(BlueprintReadOnly)

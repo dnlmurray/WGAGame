@@ -11,6 +11,33 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FSpawnManagerStateNotifier, bool, IsAction);
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCheckpointResetNotifier);
 
+struct ThresholdStruct
+{
+	ThresholdStruct() : value(0), index(-1), max_index(-1), bIsInitialised(false) {}
+	
+	ThresholdStruct(int val, int i, int max_i): value(val), index(i), max_index(max_i), bIsInitialised(true) {}
+	
+	ThresholdStruct(const ThresholdStruct& s): value(s.value), index(s.index), max_index(s.max_index), bIsInitialised(true) {}
+	
+	operator bool() const
+	{
+		return bIsInitialised;
+	}
+
+	int GetValue() const { return value; }
+
+	int GetIndex() const { return index; }
+
+	int GetMaxIndex() const { return max_index; }
+
+private:
+	int value;
+	int index;
+	int max_index;
+	bool bIsInitialised;
+};
+
+
 UCLASS()
 class WGAGAME_API ASpawnManager : public AActor
 {
@@ -32,16 +59,17 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool IsActivated() { return bIsActivated; }
 
-	void SpawnOnPoint(AActor* Point);
-
 	void Reset();
 
+	void SpawnOnRandomPoint();
 private:
 	void CheckSpawnerState();
 
 	void SpawnInitial();
 
 	void SpawnEnemy(UClass* EnemyClass, AActor* Point);
+
+	void SpawnOnPoint(AActor* Point);
 public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TArray<AActor*> SpawnPoints;
@@ -71,6 +99,9 @@ public:
 
 	FCheckpointResetNotifier ResetNotifier;
 	
+	ThresholdStruct CurrSpawnPointThresh;
+
+	ThresholdStruct CurrEnemiesKilledThresh;
 private:
 
 	int EnemiesLeftToSpawn;
@@ -78,4 +109,6 @@ private:
 	bool bIsActivated;
 
 	bool bWasActivatedInPast;
+
+	bool bUseSpawnThreshes;
 };
