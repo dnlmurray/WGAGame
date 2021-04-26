@@ -44,6 +44,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void DecreaseFaith(float Faith);
 
+	UFUNCTION(BlueprintCallable)
+	void ResetFaith();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -54,9 +57,9 @@ protected:
 private:
 	// Decrease faith on demand
 
-	void OnZeroFaith() const;
+	void OnZeroFaith();
 
-	void CheckFaithAmount() const;
+	void CheckFaithAmount();
 
 public:
 	UPROPERTY(BlueprintReadOnly)
@@ -76,4 +79,6 @@ private:
 
 	UPROPERTY()
 	AWGACharacter* Owner;
+
+	bool IsDead;
 };

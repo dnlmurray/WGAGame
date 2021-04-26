@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 
+
+#include "SpawnManager.h"
 #include "GameFramework/GameModeBase.h"
 #include "WGAGameGameModeBase.generated.h"
 
@@ -15,10 +17,35 @@ class WGAGAME_API AWGAGameGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 
+	AWGAGameGameModeBase();
+	
 public:
-	UFUNCTION(BlueprintCallable)
-	void OnPlayerDeath() const;
+	// UFUNCTION(BlueprintImplementableEvent)
+	// void OnPlayerDeath();
 
 	UFUNCTION(BlueprintCallable)
-	void OnEnemyKill() const;
+	void OnEnemyKill();
+
+	UFUNCTION(BlueprintCallable)
+	void LoadCheckpoint();
+
+	void SaveCheckpoint(FVector PlayerLocation);
+
+	void SetSpawnManager(ASpawnManager* SM);
+
+	int GetLocationEnemiesKilled() const
+	{
+		return CurrentEnemiesKilled - EnemiesKilledCheckpoint;
+	}
+	
+public:
+	UPROPERTY(BlueprintReadOnly)
+	bool bWasCheckpointReached;
+
+private:
+	int CurrentEnemiesKilled;
+	int EnemiesKilledCheckpoint;
+	FVector CheckpointSpawnLocation;
+	UPROPERTY()
+	ASpawnManager* SpawnManager;
 };

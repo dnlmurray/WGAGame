@@ -19,6 +19,7 @@ AEnemy::AEnemy()
 void AEnemy::SetSpawnManager(ASpawnManager* SM)
 {
 	SpawnManager = SM;
+	SpawnManager->ResetNotifier.AddDynamic(this, &AEnemy::ResetEnemy);
 }
 
 float AEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
@@ -46,11 +47,12 @@ void AEnemy::OnEnemyDeath()
 {
 	assert(SpawnManager != nullptr);
 	assert(EnemyWeapon != nullptr);
-
-	const int i = rand() % static_cast<int>(SpawnManager->EnemiesClassesToSpawn.Num() + 1);
-
-	SpawnManager->SpawnOnPoint(SpawnManager->SpawnPoints[i]);
 	
+	Destroy();
+}
+
+void AEnemy::ResetEnemy()
+{
 	Destroy();
 }
 

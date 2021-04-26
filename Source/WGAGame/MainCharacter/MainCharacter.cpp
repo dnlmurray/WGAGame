@@ -4,6 +4,7 @@
 #include "MainCharacter.h"
 #include "SpawnManager.h"
 #include "Enemy.h"
+#include "HealthComponent.h"
 #include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
@@ -39,15 +40,6 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 
 	return 0;
 }
-
-void AMainCharacter::OnPlayerDeath() const
-{
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("YOU DIED: 0 HEALTH"));
-
-	AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
-	GameMode->OnPlayerDeath();
-}
-
 
 // Called when the game starts or when spawned
 void AMainCharacter::BeginPlay()
