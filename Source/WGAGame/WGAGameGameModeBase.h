@@ -37,15 +37,19 @@ public:
 	{
 		return CurrentEnemiesKilled - EnemiesKilledCheckpoint;
 	}
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void GetEvilForcePercent(float& percent);
 	
 public:
 	UPROPERTY(BlueprintReadOnly)
 	bool bWasCheckpointReached;
-
+	
+	UPROPERTY(BlueprintReadOnly)
+	ASpawnManager* SpawnManager;
 private:
 	int CurrentEnemiesKilled;
 	int EnemiesKilledCheckpoint;
 	FVector CheckpointSpawnLocation;
-	UPROPERTY()
-	ASpawnManager* SpawnManager;
+
 };

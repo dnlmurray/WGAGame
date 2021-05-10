@@ -35,7 +35,15 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 
 	if (DamageCauser->GetClass()->IsChildOf(AEnemy::StaticClass()))
 	{
-		OnHitReaction(DamageAmount);
+		float coef;
+
+		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+		GameMode->GetEvilForcePercent(coef);
+
+		coef /= 100;
+		coef += 1;
+		
+		OnHitReaction(DamageAmount*coef);
 	}
 
 	return 0;

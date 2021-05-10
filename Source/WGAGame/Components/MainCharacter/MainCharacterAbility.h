@@ -8,6 +8,8 @@
 
 #include "Ability.h"
 #include "MainCharacterConfig.h"
+#include "WGAGameGameModeBase.h"
+
 #include "MainCharacterAbility.generated.h"
 
 
@@ -20,6 +22,18 @@ public:
 	UMainCharacterConfig const* GetConfig() const
 	{
 		return static_cast<UMainCharacterConfig const*>(ConfigurationData);
+	}
+
+	float GetEvilForce() const
+	{
+		float value;
+		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+		GameMode->GetEvilForcePercent(value);
+
+		value /= 100;
+		value += 1;
+
+		return value;
 	}
 	
 };

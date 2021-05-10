@@ -5,6 +5,7 @@
 #include "DrawDebugHelpers.h"
 #include "Enemy.h"
 #include "MainCharacter.h"
+#include "WGAGameGameModeBase.h"
 #include "GameFramework/Character.h"
 
 // Make sure this redefenition matches the corresponding one in the DefaultEngine.ini file
@@ -80,20 +81,27 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 				
 				if (HitCharacter != nullptr && HitCharacter != Owner && HitResult.Actor.Get() != LastActor) 
 				{
-					if (AbilitiesState != nullptr && FaithComponent != nullptr)
+					AMainCharacter* MC = Cast<AMainCharacter>(Owner);
+					float damage = WeaponDamage;
+					if (AbilitiesState != nullptr && FaithComponent != nullptr && MC != nullptr)
 					{
-						AMainCharacter* MC = Cast<AMainCharacter>(Owner);
+
+						FaithComponent->IncreaseFaith(MC->ConfigInst->FaithConfiguration.FaithIncreasePerAttack);
+						
 						if (AbilitiesState->IsUnderWhiteBarrierEffect)
-						{	
-							FaithComponent->IncreaseFaith(MC->ConfigInst->WhiteBarrierConfiguration.FaithGainPerStandartAttack);
-						}
-						if (AbilitiesState->IsUnderPureDeathEffect)
 						{
-							FaithComponent->DecreaseFaith(MC->ConfigInst->FaithConfiguration.FaithDecreasePerKill);
+							float EvilForce;
+							AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+							GameMode->GetEvilForcePercent(EvilForce);
+
+							EvilForce /= 100;
+							EvilForce += 1;
+							
+							damage *= EvilForce;
 						}
 					}
 
-					HitResult.Actor->TakeDamage(WeaponDamage,
+					HitResult.Actor->TakeDamage(damage,
 					                            SwordDamage,
 					                            nullptr,
 					                            Owner);

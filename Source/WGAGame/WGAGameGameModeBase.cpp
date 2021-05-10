@@ -57,6 +57,11 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	{
 		SpawnManager->SpawnOnRandomPoint();
 	}
+
+	if (SpawnManager->TotalEnemies == GetLocationEnemiesKilled())
+	{
+		SpawnManager->CheckSpawnerState();
+	}
 }
 
 void AWGAGameGameModeBase::LoadCheckpoint()

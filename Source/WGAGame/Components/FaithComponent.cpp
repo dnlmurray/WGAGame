@@ -26,42 +26,6 @@ void UFaithComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (bFaithDecreasingIsEnabled && !AbilitiesState->IsUnderWhiteBarrierEffect)
-	{
-		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerSecond * DeltaTime);
-	}
-}
-
-// faith decrease on kill
-void UFaithComponent::DecreasePerKill()
-{
-	if (bFaithDecreasingIsEnabled && !AbilitiesState->IsUnderWhiteBarrierEffect)
-	{
-		GEngine->AddOnScreenDebugMessage(
-		-1,
-		5.f,
-		FColor::Blue,
-		TEXT("Faith decrease on kill"),
-		true,
-		FVector2D(1.0f, 1.0f));
-		DecreaseFaith(ConfigurationData->FaithConfiguration.FaithDecreasePerKill);
-	}
-}
-
-void UFaithComponent::OnZeroFaith()
-{
-	if (!IsDead) {
-		Owner->OnDeathReaction(this);
-		IsDead = true;
-	}
-}
-
-void UFaithComponent::CheckFaithAmount()
-{
-	if (FaithValue <= 0)
-	{
-		OnZeroFaith();
-	}
 }
 
 void UFaithComponent::IncreaseFaith(float Faith)
@@ -74,14 +38,13 @@ void UFaithComponent::IncreaseFaith(float Faith)
 void UFaithComponent::DecreaseFaith(float Faith)
 {
 	if (Faith >= 0) {
-		FaithValue -= Faith;
-		CheckFaithAmount();
+		FaithValue = FMath::Clamp(FaithValue - Faith, 0.0f, MaxFaith);
 	}
 }
 
 void UFaithComponent::ResetFaith()
 {
-	FaithValue = MaxFaith;
+	FaithValue = 0;
 	IsDead = false;
 }
 
@@ -91,5 +54,5 @@ void UFaithComponent::Initialize(UMainCharacterConfig* Config, UAbilitiesState* 
 	AbilitiesState = State;
 
 	MaxFaith = ConfigurationData->FaithConfiguration.MaxFaith;
-	FaithValue = MaxFaith;
+	FaithValue = 0;
 }

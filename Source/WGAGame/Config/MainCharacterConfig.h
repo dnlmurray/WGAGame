@@ -7,18 +7,6 @@
 #include "BaseConfig.h"
 #include "MainCharacterConfig.generated.h"
 
-// USTRUCT(BlueprintType)
-// struct FAdvancedHealthConfiguration
-// {
-// 	GENERATED_BODY()
-//
-// 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-// 	float HealthIncreaseAfterLocationPassed;
-//
-// 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-// 	float HealthIncreaseAfterLoad;
-// };
-
 
 USTRUCT(BlueprintType)
 struct FFaithConfiguration
@@ -29,10 +17,7 @@ struct FFaithConfiguration
 	float MaxFaith;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithDecreasePerSecond;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithDecreasePerKill;
+	float FaithIncreasePerAttack;
 };
 
 USTRUCT(BlueprintType)
@@ -63,10 +48,10 @@ struct FWhiteBarrierConfiguration
 	float Duration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithGainPerStandartAttack;
-
+	float FaithCost;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float HealthGainPerKill;
+	float HealthGainPerSecond;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Cooldown;
@@ -90,10 +75,13 @@ struct FExorcismConfiguration
 	float Damage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithGainPerKill;
+	float FaithCost;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float HealthGainPerKill;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float EvilForceDecreasePerKill;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Cooldown;
@@ -121,21 +109,6 @@ struct FSkyImpulseConfiguration
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	bool Debug;
-};
-
-USTRUCT(BlueprintType)
-struct FPureDeathConfiguration
-{
-	GENERATED_BODY()
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float ChargeTime;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float FaithGainPerKill;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Cooldown;
 };
 
 USTRUCT(BlueprintType)
@@ -189,9 +162,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FSkyImpulseConfiguration SkyImpulseConfiguration;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	FPureDeathConfiguration PureDeathConfiguration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	FAnimSpeed AnimationsConfiguration;

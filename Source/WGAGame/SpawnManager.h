@@ -56,45 +56,54 @@ public:
 	UFUNCTION()
 	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 
-	UFUNCTION(BlueprintCallable)
-	bool IsActivated() { return bIsActivated; }
+	UFUNCTION(BlueprintImplementableEvent)
+	void UpdateEvilForce();
 
 	void Reset();
 
 	void SpawnOnRandomPoint();
-private:
-	void CheckSpawnerState();
 
+	void CheckSpawnerState();
+private:
 	void SpawnInitial();
 
 	void SpawnEnemy(UClass* EnemyClass, AActor* Point);
 
 	void SpawnOnPoint(AActor* Point);
 public:	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner|Points")
 	TArray<AActor*> SpawnPoints;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner|Classes")
 	TArray<UClass*> EnemiesClassesToSpawn;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner|Classes")
 	TArray<float> EnemiesPercents;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner|Classes")
 	TArray<int> EnemiesMinNumbers;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner")
 	TArray<int> SpawnPointsThreshes;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner")
 	TArray<int> EnemiesKilledThreshes;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner")
 	int MaxEnemyNumber;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Spawner")
 	int MinEnemyNumber;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Evil Force")
+	float MinPercent;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Evil Force")
+	float MaxPercent;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Evil Force")
+	float EvilForceIncreasePerSecond;
+	
 	FSpawnManagerStateNotifier StateNotifier;
 
 	FCheckpointResetNotifier ResetNotifier;
@@ -102,11 +111,17 @@ public:
 	ThresholdStruct CurrSpawnPointThresh;
 
 	ThresholdStruct CurrEnemiesKilledThresh;
-private:
 
-	int EnemiesLeftToSpawn;
-	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	bool bIsActivated;
+
+	UPROPERTY(VisibleAnywhere)
+	int EnemiesLeftToSpawn;
+
+	UPROPERTY(VisibleAnywhere)
+	int TotalEnemies;
+	
+private:
 
 	bool bWasActivatedInPast;
 

@@ -38,6 +38,9 @@ void UExorcism::Place(FVector ExorcismVector)
 	                  Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight());
 	const FCollisionShape ExorcismZone = FCollisionShape::MakeBox(BoxExtent);
 
+	const float EvilForce = GetEvilForce();
+	const float FinalDamage = GetConfig()->ExorcismConfiguration.Damage * EvilForce;
+	
 	TArray<FHitResult> HitsInfo;
 	HitsInfo.SetNum(40);
 
@@ -55,7 +58,7 @@ void UExorcism::Place(FVector ExorcismVector)
 
 				if (HitCharacter != nullptr && HitCharacter->GetClass()->IsChildOf(AEnemy::StaticClass()))
 				{
-					HitCharacter->TakeDamage(GetConfig()->ExorcismConfiguration.Damage,
+					HitCharacter->TakeDamage(FinalDamage,
 					                         FDamageEvent{},
 					                         Owner->Controller,
 					                         Owner);

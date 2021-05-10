@@ -3,6 +3,8 @@
 
 #include "HealthComponent.h"
 
+#include "MainCharacterConfig.h"
+
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent(): IsDead(false)
 {
@@ -28,8 +30,6 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType,
                                      FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
 }
 
 void UHealthComponent::OnZeroHealth()
