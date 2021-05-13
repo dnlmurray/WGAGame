@@ -30,6 +30,15 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType,
                                      FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (AbilitiesState != nullptr && AbilitiesState->IsUnderWhiteBarrierEffect)
+	{
+		const auto MCConfig = Cast<UMainCharacterConfig>(ConfigurationData);
+		if (MCConfig != nullptr)
+		{
+			IncreaseHealth(MCConfig->WhiteBarrierConfiguration.HealthGainPerSecond*DeltaTime);
+		}
+	}
 }
 
 void UHealthComponent::OnZeroHealth()

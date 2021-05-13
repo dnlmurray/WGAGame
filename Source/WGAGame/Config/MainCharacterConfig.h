@@ -102,8 +102,14 @@ struct FSkyImpulseConfiguration
 	float Damage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FaithCost;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float PushImpulse;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float EvilForceDecrease;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Cooldown;
 	

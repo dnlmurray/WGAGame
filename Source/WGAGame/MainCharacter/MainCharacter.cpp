@@ -4,8 +4,6 @@
 #include "MainCharacter.h"
 #include "SpawnManager.h"
 #include "Enemy.h"
-#include "HealthComponent.h"
-#include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 

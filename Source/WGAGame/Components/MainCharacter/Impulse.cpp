@@ -34,6 +34,9 @@ void UImpulse::Place()
 		FVector(0.0f, 0.0f, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()));
 	FVector& SweepEnd = SweepStart;
 
+	const float EvilForce = GetEvilForce();
+	const float FinalDamage = GetConfig()->SkyImpulseConfiguration.Damage * EvilForce;
+	
 	FVector VelocityVector{};
 	float Distance = 0;
 	const FVector Location = Owner->GetActorLocation();
@@ -56,7 +59,7 @@ void UImpulse::Place()
 					HitCharacter->GetController()->StopMovement();
 					HitCharacter->GetCharacterMovement()->AddImpulse(VelocityVector, false);
 
-					HitCharacter->TakeDamage(GetConfig()->SkyImpulseConfiguration.Damage,
+					HitCharacter->TakeDamage(FinalDamage,
 					                         FDamageEvent{},
 					                         Owner->Controller,
 					                         Owner);
