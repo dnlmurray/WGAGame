@@ -14,8 +14,8 @@
 ASpawnManager::ASpawnManager()
 : MaxEnemyNumber(0)
 , MinEnemyNumber(0)
-, EnemiesLeftToSpawn(0)
 , bIsActivated(false)
+, EnemiesLeftToSpawn(0)
 , bWasActivatedInPast(false)
 , bUseSpawnThreshes(false)
 {
@@ -29,7 +29,7 @@ ASpawnManager::ASpawnManager()
 void ASpawnManager::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
 	assert(EnemiesClassesToSpawn.Num() >= 1);
 	assert(EnemiesClassesToSpawn.Num() == EnemiesClassesPercents.Num() == EnemiesMinNumber.Num());
 	assert(EnemiesKilledThreshes.Num() == SpawnPointsThreshes.Num());
@@ -51,7 +51,7 @@ void ASpawnManager::BeginPlay()
 		}
 	}
 	
-	EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
+	TotalEnemies = EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
 
 	for (int i = 0; i < EnemiesKilledThreshes.Num(); ++i)
 	{
@@ -92,6 +92,8 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 		{
 			SpawnInitial();
 		}
+		
+		UpdateEvilForce();
 	}
 }
 
@@ -102,6 +104,7 @@ void ASpawnManager::CheckSpawnerState()
 		bIsActivated = false;
 		bWasActivatedInPast = true;
 		StateNotifier.Broadcast(bIsActivated);
+		UpdateEvilForce();
 	}
 }
 

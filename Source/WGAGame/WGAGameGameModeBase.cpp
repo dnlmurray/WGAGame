@@ -18,20 +18,20 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	CurrentEnemiesKilled++;
 	StaticCast<AMainCharacter*>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0))->OnEnemyKill();
 
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
-		FString::Printf(TEXT("Killed enemies: %d"), CurrentEnemiesKilled));
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
-            FString::Printf(TEXT("Next threshold after: %d"), SpawnManager->CurrEnemiesKilledThresh.GetValue()));
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
+	// 	FString::Printf(TEXT("Killed enemies: %d"), CurrentEnemiesKilled));
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
+ //            FString::Printf(TEXT("Next threshold after: %d"), SpawnManager->CurrEnemiesKilledThresh.GetValue()));
 	
 	if (SpawnManager->CurrEnemiesKilledThresh && SpawnManager->CurrSpawnPointThresh &&
 		SpawnManager->CurrEnemiesKilledThresh.GetIndex() < SpawnManager->CurrEnemiesKilledThresh.GetMaxIndex() &&
 		SpawnManager->CurrSpawnPointThresh.GetIndex() < SpawnManager->CurrSpawnPointThresh.GetMaxIndex())
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD CHECKED"));
+		// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD CHECKED"));
 
 		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh.GetValue())
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD PASSED"));
+			// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD PASSED"));
 
 			const int OldPointsNum = SpawnManager->CurrSpawnPointThresh.GetValue();
 			const int OldIndex = SpawnManager->CurrSpawnPointThresh.GetIndex();
@@ -57,6 +57,11 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	{
 		SpawnManager->SpawnOnRandomPoint();
 	}
+
+	if (SpawnManager->TotalEnemies == GetLocationEnemiesKilled())
+	{
+		SpawnManager->CheckSpawnerState();
+	}
 }
 
 void AWGAGameGameModeBase::LoadCheckpoint()
@@ -66,8 +71,6 @@ void AWGAGameGameModeBase::LoadCheckpoint()
 	
 	if (SpawnManager != nullptr)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("SM RESETED"));
-
 		SpawnManager->Reset();
 	}
 	

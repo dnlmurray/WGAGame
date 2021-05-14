@@ -25,7 +25,7 @@ public:
 	void OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor);
 	
 	UFUNCTION(BlueprintImplementableEvent)
-    void OnActionStateChange(bool EnableFaithDecrease);
+    void OnActionStateChange(bool IsCombat);
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void OnEnemyKill();

@@ -6,6 +6,7 @@
 
 #include "MainCharacter.h"
 #include "Weapon.h"
+#include "WGAGameGameModeBase.h"
 
 // Sets default values
 AEnemy::AEnemy()
@@ -30,7 +31,15 @@ float AEnemy::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AC
 	if (WeaponComponent->GetClass()->IsChildOf(UWeapon::StaticClass()) &&
 		DamageCauser->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
 	{
-		OnHitReaction(DamageAmount);
+		float coef;
+
+		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+		GameMode->GetEvilForcePercent(coef);
+
+		coef /= 100;
+		coef += 1;
+		
+		OnHitReaction(DamageAmount/coef);
 	}
 
 	return 0;

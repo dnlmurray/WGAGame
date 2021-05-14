@@ -16,15 +16,11 @@ public:
 	UAbilitiesState()
 		: IsUnderWhiteBarrierEffect(false)
 		, IsInvincible(false)
-		, IsUnderPureDeathEffect(false)
 	{ }
 
 	bool  IsUnderWhiteBarrierEffect;
 	
 	bool  IsInvincible;
-	
-	UPROPERTY(BlueprintReadWrite)
-	bool  IsUnderPureDeathEffect;
 
 	UPROPERTY(BlueprintReadWrite)
 	bool  IsUnderExorcismEffect;

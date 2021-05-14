@@ -21,25 +21,12 @@ public:
 	// Sets default values for this component's properties
 	UFaithComponent();
 
-	// Enable/disable faith decreasing when the character is in battle/out of battle
-	UFUNCTION(BlueprintCallable)
-	void EnableFaithDecreasing() { bFaithDecreasingIsEnabled = true; }
-
-	UFUNCTION(BlueprintCallable)
-	void DisableFaithDecreasing() { bFaithDecreasingIsEnabled = false; }
-
 	// Restore some amount of faith when special skills are applied
 	UFUNCTION(BlueprintCallable)
 	void IncreaseFaith(float Faith);
 
 	UFUNCTION(BlueprintCallable)
-	bool GetFaithDecreasingStatus() const { return bFaithDecreasingIsEnabled; }
-
-	UFUNCTION(BlueprintCallable)
     void Initialize(UMainCharacterConfig* Config, UAbilitiesState* State);
-
-	UFUNCTION(BlueprintCallable)
-	void DecreasePerKill();
 
 	UFUNCTION(BlueprintCallable)
 	void DecreaseFaith(float Faith);
@@ -54,13 +41,6 @@ protected:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-private:
-	// Decrease faith on demand
-
-	void OnZeroFaith();
-
-	void CheckFaithAmount();
-
 public:
 	UPROPERTY(BlueprintReadOnly)
 	float MaxFaith;
@@ -74,8 +54,6 @@ private:
 
 	UPROPERTY()
 	UAbilitiesState* AbilitiesState;
-
-	uint8 bFaithDecreasingIsEnabled:1;
 
 	UPROPERTY()
 	AWGACharacter* Owner;

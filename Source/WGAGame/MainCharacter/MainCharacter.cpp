@@ -4,8 +4,6 @@
 #include "MainCharacter.h"
 #include "SpawnManager.h"
 #include "Enemy.h"
-#include "HealthComponent.h"
-#include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -35,7 +33,15 @@ float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageE
 
 	if (DamageCauser->GetClass()->IsChildOf(AEnemy::StaticClass()))
 	{
-		OnHitReaction(DamageAmount);
+		float coef;
+
+		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+		GameMode->GetEvilForcePercent(coef);
+
+		coef /= 100;
+		coef += 1;
+		
+		OnHitReaction(DamageAmount*coef);
 	}
 
 	return 0;

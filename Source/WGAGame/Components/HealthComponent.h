@@ -41,6 +41,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ResetHealth();
+
 private:
 	void OnZeroHealth();
 
