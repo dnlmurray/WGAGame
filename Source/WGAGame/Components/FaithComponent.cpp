@@ -44,7 +44,7 @@ void UFaithComponent::DecreaseFaith(float Faith)
 
 void UFaithComponent::ResetFaith()
 {
-	FaithValue = 0;
+	FaithValue = FMath::Clamp(ConfigurationData->FaithConfiguration.FaithInitialAmount, 0.0f, MaxFaith);
 	IsDead = false;
 }
 
@@ -54,5 +54,5 @@ void UFaithComponent::Initialize(UMainCharacterConfig* Config, UAbilitiesState* 
 	AbilitiesState = State;
 
 	MaxFaith = ConfigurationData->FaithConfiguration.MaxFaith;
-	FaithValue = 0;
+	FaithValue = FMath::Clamp(ConfigurationData->FaithConfiguration.FaithInitialAmount, 0.0f, MaxFaith);
 }

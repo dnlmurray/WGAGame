@@ -17,6 +17,9 @@ struct FFaithConfiguration
 	float MaxFaith;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	float FaithInitialAmount;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float FaithIncreasePerAttack;
 };
 
