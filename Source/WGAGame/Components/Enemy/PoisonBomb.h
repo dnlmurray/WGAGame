@@ -8,7 +8,7 @@
 
 #include "Ability.h"
 #include "BombEnemyConfig.h"
-#include "BombProjectile.h"
+#include "ThrownProjectile.h"
 
 #include "PoisonBomb.generated.h"
 
@@ -41,7 +41,7 @@ public:
 	void PlaceProjectile(FTransform Transform);
 
 	UFUNCTION()
-	void Place();
+	void PlaceExplosion(AActor* OverlappedActor);
 
 	UBombEnemyConfig const* GetConfig() const
 	{
@@ -53,11 +53,11 @@ public:
 	
 public:
 	UPROPERTY(EditDefaultsOnly, Category="ActorSpawning")
-	TSubclassOf<ABombProjectile> ProjectileVisual;
+	TSubclassOf<AThrownProjectile> ProjectileVisual;
 	
 private:
 	UPROPERTY()
-	ABombProjectile* ProjectileRef;
+	AThrownProjectile* ProjectileRef;
 
 	const float g = -980.0f;
 };
