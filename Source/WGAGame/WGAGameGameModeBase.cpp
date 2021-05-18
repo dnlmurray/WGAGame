@@ -39,11 +39,12 @@ void AWGAGameGameModeBase::OnEnemyKill()
 
 			SpawnManager->CurrSpawnPointThresh = ThresholdStruct(SpawnManager->SpawnPointsThreshes[OldIndex + 1],
 			                                                     OldIndex + 1, MaxIndex);
+			SpawnManager->PointsActivated = SpawnManager->CurrSpawnPointThresh.GetValue();
 
 			SpawnManager->CurrEnemiesKilledThresh = ThresholdStruct(SpawnManager->EnemiesKilledThreshes[OldIndex + 1],
                                                      OldIndex + 1, MaxIndex);
 			
-			const int DeltaPointsNum = SpawnManager->CurrSpawnPointThresh.GetValue() - OldPointsNum;
+			const int DeltaPointsNum = SpawnManager->CurrSpawnPointThresh.GetValue() - OldPointsNum + 1;
 			for (int i = 0; i < DeltaPointsNum; ++i)
 			{
 				SpawnManager->SpawnOnRandomPoint();
