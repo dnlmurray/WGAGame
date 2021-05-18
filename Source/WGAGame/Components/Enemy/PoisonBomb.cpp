@@ -1,14 +1,14 @@
-﻿// Fill out your copyright notice in the Description page of Project Settings.
+﻿#include "PoisonBomb.h"
 
-#include "PoisonBomb.h"
 
+#include "Enemy.h"
 #include "MainCharacter.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
 void UPoisonBomb::PlaceProjectile(FTransform Transform)
 {	
-	ProjectileRef = GetWorld()->SpawnActorDeferred<ABombProjectile>(ProjectileVisual, Transform);
+	ProjectileRef = GetWorld()->SpawnActorDeferred<AThrownProjectile>(ProjectileVisual, Transform);
 	ProjectileRef->SetOwner(Owner);
 	ProjectileRef->FinishSpawning(Transform);
 
@@ -21,10 +21,10 @@ void UPoisonBomb::PlaceProjectile(FTransform Transform)
 	}
 	
 	// when projectile collides with anything, visual and damage logic will be placed
-	ProjectileRef->Notifier.AddDynamic(this, &UPoisonBomb::Place);
+	ProjectileRef->Notifier.AddDynamic(this, &UPoisonBomb::PlaceExplosion);
 }
 
-void UPoisonBomb::Place()
+void UPoisonBomb::PlaceExplosion(AActor* OverlappedActor)
 {
 	FTransform Transform(ProjectileRef->GetActorRotation(),
                          ProjectileRef->GetActorLocation(),

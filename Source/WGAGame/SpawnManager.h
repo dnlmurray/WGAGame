@@ -112,14 +112,20 @@ public:
 
 	ThresholdStruct CurrEnemiesKilledThresh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	bool bIsActivated;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
 	int EnemiesLeftToSpawn;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
 	int TotalEnemies;
+	
+	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	int PointsActivated;
+
+	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	int TotalPoints;
 	
 private:
 

@@ -1,10 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ // Fill out your copyright notice in the Description page of Project Settings.
 
 
 #include "SpawnManager.h"
 
 #include <cassert>
 #include <string>
+#include <ctime>
 
 
 #include "Enemy.h"
@@ -40,8 +41,6 @@ void ASpawnManager::BeginPlay()
 		sum += num;
 	}
 
-	assert(sum <= EnemiesLeftToSpawn);
-
 	for (int i = 0; i < SpawnPointsThreshes.Num(); ++i)
 	{
 		assert(SpawnPointsThreshes[i] <= SpawnPoints.Num());
@@ -50,8 +49,14 @@ void ASpawnManager::BeginPlay()
 			assert(SpawnPointsThreshes[i] >= SpawnPointsThreshes[i-1]);
 		}
 	}
+
+	const int NumDiff = MaxEnemyNumber - MinEnemyNumber;
+	std::srand(std::time(nullptr));
+	const int RandomDiff = rand() % NumDiff;
 	
-	TotalEnemies = EnemiesLeftToSpawn = MinEnemyNumber + (rand() % static_cast<int>(MaxEnemyNumber - MinEnemyNumber + 1));
+	TotalEnemies = MinEnemyNumber + RandomDiff;
+	EnemiesLeftToSpawn = TotalEnemies;
+	assert(sum <= EnemiesLeftToSpawn);
 
 	for (int i = 0; i < EnemiesKilledThreshes.Num(); ++i)
 	{
@@ -66,6 +71,8 @@ void ASpawnManager::BeginPlay()
 	{
 		bUseSpawnThreshes = true;
 	}
+
+	TotalPoints = SpawnPoints.Num();
 }
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
@@ -117,6 +124,8 @@ void ASpawnManager::SpawnInitial()
 	{
 		SpawnPointsNum = CurrSpawnPointThresh.GetValue();
 	}
+
+	PointsActivated = SpawnPointsNum;
 	
 	for (int i = 0; i < SpawnPointsNum; ++i)
 	{
@@ -196,7 +205,7 @@ void ASpawnManager::Reset()
 
 void ASpawnManager::SpawnOnRandomPoint()
 {
-	const int i = rand() % static_cast<int>(EnemiesClassesToSpawn.Num() + 1);
+	const int i = rand() % SpawnPoints.Num();
 	
 	SpawnOnPoint(SpawnPoints[i]);
 }

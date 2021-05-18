@@ -4,20 +4,19 @@
 
 #include "CoreMinimal.h"
 
-#include "BombEnemyConfig.h"
 #include "GameFramework/Actor.h"
-#include "BombProjectile.generated.h"
+#include "ThrownProjectile.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FProjectileNotifier);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FProjectileNotifier, AActor*, OverlappedActor);
 
 UCLASS()
-class WGAGAME_API ABombProjectile : public AActor
+class WGAGAME_API AThrownProjectile : public AActor
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this actor's properties
-	ABombProjectile();
+	AThrownProjectile();
 	
 	UFUNCTION()
     void OnOverlapBegin(AActor* MyOverlappedActor, AActor* OtherActor);
