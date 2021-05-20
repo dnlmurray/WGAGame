@@ -13,17 +13,12 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE(FCheckpointResetNotifier);
 
 struct ThresholdStruct
 {
-	ThresholdStruct() : value(0), index(-1), max_index(-1), bIsInitialised(false) {}
+	ThresholdStruct() : value(0), index(-1), max_index(-1) {}
 	
-	ThresholdStruct(int val, int i, int max_i): value(val), index(i), max_index(max_i), bIsInitialised(true) {}
+	ThresholdStruct(int val, int i, int max_i): value(val), index(i), max_index(max_i) {}
 	
-	ThresholdStruct(const ThresholdStruct& s): value(s.value), index(s.index), max_index(s.max_index), bIsInitialised(true) {}
+	ThresholdStruct(const ThresholdStruct& s): value(s.value), index(s.index), max_index(s.max_index) {}
 	
-	operator bool() const
-	{
-		return bIsInitialised;
-	}
-
 	int GetValue() const { return value; }
 
 	int GetIndex() const { return index; }
@@ -34,7 +29,6 @@ private:
 	int value;
 	int index;
 	int max_index;
-	bool bIsInitialised;
 };
 
 
@@ -108,26 +102,24 @@ public:
 
 	FCheckpointResetNotifier ResetNotifier;
 	
-	ThresholdStruct CurrSpawnPointThresh;
+	TOptional<ThresholdStruct> CurrSpawnPointThresh;
 
-	ThresholdStruct CurrEnemiesKilledThresh;
+	TOptional<ThresholdStruct> CurrEnemiesKilledThresh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	bool bIsActivated;
 
-	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	int EnemiesLeftToSpawn;
 
-	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	int TotalEnemies;
 	
-	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	int PointsActivated;
 
-	UPROPERTY(VisibleAnywhere, Category="Spawner|Status")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Spawner|Status")
 	int TotalPoints;
-	
-private:
 
 	bool bWasActivatedInPast;
 
