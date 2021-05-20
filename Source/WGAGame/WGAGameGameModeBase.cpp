@@ -18,45 +18,56 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	CurrentEnemiesKilled++;
 	StaticCast<AMainCharacter*>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0))->OnEnemyKill();
 
-	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
-	// 	FString::Printf(TEXT("Killed enemies: %d"), CurrentEnemiesKilled));
-	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue,
- //            FString::Printf(TEXT("Next threshold after: %d"), SpawnManager->CurrEnemiesKilledThresh.GetValue()));
-	
 	if (SpawnManager->CurrEnemiesKilledThresh && SpawnManager->CurrSpawnPointThresh &&
-		SpawnManager->CurrEnemiesKilledThresh.GetIndex() < SpawnManager->CurrEnemiesKilledThresh.GetMaxIndex() &&
-		SpawnManager->CurrSpawnPointThresh.GetIndex() < SpawnManager->CurrSpawnPointThresh.GetMaxIndex())
+		SpawnManager->CurrEnemiesKilledThresh->GetIndex() < SpawnManager->CurrEnemiesKilledThresh->GetMaxIndex() &&
+		SpawnManager->CurrSpawnPointThresh->GetIndex() < SpawnManager->CurrSpawnPointThresh->GetMaxIndex())
 	{
 		// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD CHECKED"));
 
-		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh.GetValue())
+		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue())
 		{
 			// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("THRESHOLD PASSED"));
 
-			const int OldPointsNum = SpawnManager->CurrSpawnPointThresh.GetValue();
-			const int OldIndex = SpawnManager->CurrSpawnPointThresh.GetIndex();
-			const int MaxIndex = SpawnManager->CurrSpawnPointThresh.GetMaxIndex();
+				const int OldPointsNum = SpawnManager->CurrSpawnPointThresh->GetValue();
+				const int OldIndex = SpawnManager->CurrSpawnPointThresh->GetIndex();
+				const int MaxIndex = SpawnManager->CurrSpawnPointThresh->GetMaxIndex();
 
-			SpawnManager->CurrSpawnPointThresh = ThresholdStruct(SpawnManager->SpawnPointsThreshes[OldIndex + 1],
-			                                                     OldIndex + 1, MaxIndex);
-			SpawnManager->PointsActivated = SpawnManager->CurrSpawnPointThresh.GetValue();
+				SpawnManager->CurrSpawnPointThresh = ThresholdStruct(SpawnManager->SpawnPointsThreshes[OldIndex + 1],
+				                                                     OldIndex + 1, MaxIndex);
+				SpawnManager->PointsActivated = SpawnManager->CurrSpawnPointThresh->GetValue();
 
-			SpawnManager->CurrEnemiesKilledThresh = ThresholdStruct(SpawnManager->EnemiesKilledThreshes[OldIndex + 1],
-                                                     OldIndex + 1, MaxIndex);
-			
-			const int DeltaPointsNum = SpawnManager->CurrSpawnPointThresh.GetValue() - OldPointsNum + 1;
-			for (int i = 0; i < DeltaPointsNum; ++i)
-			{
-				SpawnManager->SpawnOnRandomPoint();
+				SpawnManager->CurrEnemiesKilledThresh = ThresholdStruct(SpawnManager->EnemiesKilledThreshes[OldIndex + 1],
+	                                                     OldIndex + 1, MaxIndex);
+				
+				const int DeltaPointsNum = SpawnManager->CurrSpawnPointThresh->GetValue() - OldPointsNum + 1;
+				for (int i = 0; i < DeltaPointsNum; ++i)
+				{
+					SpawnManager->SpawnOnRandomPoint();
+				}
 			}
-		}
 		else
 		{
 			SpawnManager->SpawnOnRandomPoint();
 		}
-	} else
+	}
+	else
 	{
-		SpawnManager->SpawnOnRandomPoint();
+		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue() &&
+			SpawnManager->PointsActivated < SpawnManager->TotalPoints)
+		{
+			const int OldPointsNum = SpawnManager->PointsActivated;
+			const int DeltaPointsNum = SpawnManager->TotalPoints - OldPointsNum + 1;
+
+			for (int i = 0; i < DeltaPointsNum; ++i)
+			{
+				SpawnManager->SpawnOnRandomPoint();
+			}
+			
+			SpawnManager->PointsActivated = SpawnManager->TotalPoints;
+		}
+		else {
+			SpawnManager->SpawnOnRandomPoint();
+		}
 	}
 
 	if (SpawnManager->TotalEnemies == GetLocationEnemiesKilled())
