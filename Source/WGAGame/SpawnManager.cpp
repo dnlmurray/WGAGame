@@ -70,6 +70,7 @@ void ASpawnManager::BeginPlay()
 	if (SpawnPointsThreshes.Num() > 0 && EnemiesKilledThreshes.Num() > 0)
 	{
 		bUseSpawnThreshes = true;
+		assert(SpawnPointsThreshes.Num() == EnemiesKilledThreshes.Num());
 	}
 
 	TotalPoints = SpawnPoints.Num();
@@ -122,7 +123,7 @@ void ASpawnManager::SpawnInitial()
 
 	if (bUseSpawnThreshes && CurrSpawnPointThresh && CurrEnemiesKilledThresh)
 	{
-		SpawnPointsNum = CurrSpawnPointThresh.GetValue();
+		SpawnPointsNum = CurrSpawnPointThresh->GetValue();
 	}
 
 	PointsActivated = SpawnPointsNum;
