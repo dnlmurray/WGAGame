@@ -19,9 +19,6 @@ struct FBombConfiguration
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 	float Radius;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
-	float Cooldown;
 };
 
 UCLASS(BlueprintType)
