@@ -79,7 +79,7 @@ void AWGAGameGameModeBase::OnEnemyKill()
 void AWGAGameGameModeBase::LoadCheckpoint()
 {
 	CurrentEnemiesKilled = EnemiesKilledCheckpoint;
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("CHECKPOINT LOADED"));
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("CHECKPOINT LOADED"));
 	
 	if (SpawnManager != nullptr)
 	{
@@ -95,7 +95,7 @@ void AWGAGameGameModeBase::LoadCheckpoint()
 
 void AWGAGameGameModeBase::SaveCheckpoint(FVector PlayerLocation)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("CHECKPOINT SAVED"));
+	// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("CHECKPOINT SAVED"));
 
 	CheckpointSpawnLocation = PlayerLocation;
 	bWasCheckpointReached = true;

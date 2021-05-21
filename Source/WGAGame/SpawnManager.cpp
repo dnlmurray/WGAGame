@@ -83,10 +83,10 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
 		GameMode->SetSpawnManager(this);
 		
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enter spawner"));
+		// GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Enter spawner"));
 		bIsActivated = true;
 
-		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, FString::Printf(TEXT("enemies to spawn: %d"), EnemiesLeftToSpawn));
+		// GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, FString::Printf(TEXT("enemies to spawn: %d"), EnemiesLeftToSpawn));
 
 		if (bUseSpawnThreshes)
 		{
@@ -179,7 +179,7 @@ void ASpawnManager::SpawnOnPoint(AActor* Point)
 
 void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, TEXT("spawned enemy"));
+	// GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, TEXT("spawned enemy"));
 
 	auto SpawnLocation = Point->GetActorLocation();
 	auto SpawnRotation = Point->GetActorRotation();

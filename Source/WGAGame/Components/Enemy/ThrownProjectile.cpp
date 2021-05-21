@@ -3,6 +3,8 @@
 
 #include "ThrownProjectile.h"
 
+#include "Enemy.h"
+
 
 // Sets default values
 AThrownProjectile::AThrownProjectile()
@@ -15,7 +17,7 @@ AThrownProjectile::AThrownProjectile()
 
 void AThrownProjectile::OnOverlapBegin(AActor* MyOverlappedActor, AActor* OtherActor)
 {
-	if (OtherActor != GetOwner())
+	if (!OtherActor->GetClass()->IsChildOf(AEnemy::StaticClass()))
 	{
         Notifier.Broadcast(OtherActor);
 		OnOverlapEnd();
