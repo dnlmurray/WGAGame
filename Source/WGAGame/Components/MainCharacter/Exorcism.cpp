@@ -3,6 +3,8 @@
 
 #include "Exorcism.h"
 
+
+#include "DrawDebugHelpers.h"
 #include "GameFramework/Character.h"
 #include "Components/CapsuleComponent.h"
 #include "Enemy.h"
@@ -28,8 +30,9 @@ void UExorcism::Place(FVector ExorcismVector)
 
 	FTransform Transform(ExorcismVector.Rotation(),
 	                     Location + ExorcismVector * GetConfig()->ExorcismConfiguration.Length,
-	                     FVector(10.0f, 10.0f, 0.025f));
-
+	                     FVector(1.0f, 1.0f, 1.0f));
+	//DrawDebugPoint(GetWorld(), Transform., 10.0f, FColor::Green, true, 10.0f, 0, 1);
+	
 	PlaceVisual(Transform);
 
 	// TODO: remove box
@@ -44,11 +47,16 @@ void UExorcism::Place(FVector ExorcismVector)
 	TArray<FHitResult> HitsInfo;
 	HitsInfo.SetNum(40);
 
-	FVector SweepStart = Owner->GetActorTransform().TransformPosition(
+	FVector SweepStart = Transform.TransformPosition(
 		FVector(0.0f, 0.0f, Owner->GetCapsuleComponent()->GetScaledCapsuleHalfHeight()));
 	FVector& SweepEnd = SweepStart;
 
-	if (GetWorld()->SweepMultiByChannel(HitsInfo, SweepStart, SweepEnd, FQuat::Identity, ECC_Weapon, ExorcismZone))
+	if (GetConfig()->ExorcismConfiguration.Debug)
+	{
+		DrawDebugBox(GetWorld(), SweepStart, BoxExtent, Owner->GetActorRotation().Quaternion(), FColor::Green, true, 2.0f, 0, 1);
+	}
+	
+	if (GetWorld()->SweepMultiByChannel(HitsInfo, SweepStart, SweepEnd, Owner->GetActorRotation().Quaternion(), ECC_Weapon, ExorcismZone))
 	{
 		for (auto& HitResult : HitsInfo)
 		{
