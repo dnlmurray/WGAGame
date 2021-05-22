@@ -3,6 +3,9 @@
 
 #include "WGAGameGameModeBase.h"
 
+#include <string>
+
+
 #include "MainCharacter.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -70,7 +73,10 @@ void AWGAGameGameModeBase::OnEnemyKill()
 		}
 	}
 
-	if (SpawnManager->TotalEnemies == GetLocationEnemiesKilled())
+	GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Red,
+		FString::Printf(TEXT("Killed enemies: %d"), GetLocationEnemiesKilled()));
+
+	if (GetLocationEnemiesKilled() == SpawnManager->TotalEnemies)
 	{
 		SpawnManager->CheckSpawnerState();
 	}

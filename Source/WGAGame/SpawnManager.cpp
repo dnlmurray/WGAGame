@@ -191,12 +191,21 @@ void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 	const FTransform SpawnLocAndRotation(SpawnRotation, SpawnLocation, FVector::OneVector);
 	AEnemy* SpawnedEnemy = GetWorld()->SpawnActorDeferred<AEnemy>(EnemyClass, SpawnLocAndRotation);
 
-	assert(SpawnedEnemy != nullptr);
+	// assert(SpawnedEnemy != nullptr);
 	
 	SpawnedEnemy->SetSpawnManager(this);
-	EnemiesLeftToSpawn --;
 	SpawnedEnemy->FinishSpawning(SpawnLocAndRotation);
-	SpawnedEnemy->SetActorHiddenInGame(true);
+	
+	if (!IsValid(SpawnedEnemy))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 0.5f, FColor::Blue, TEXT("failed spawned enemy: retry"));
+		const int i = rand() % SpawnPoints.Num();
+		SpawnEnemy(EnemyClass, SpawnPoints[i]);
+	} else
+	{
+		EnemiesLeftToSpawn --;
+		SpawnedEnemy->SetActorHiddenInGame(true);
+	}
 }
 
 void ASpawnManager::Reset()
