@@ -113,7 +113,7 @@ void UWeapon::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponen
 		
 		if (ConfigurationData->WeaponAttackConfiguration.Debug)
 		{
-			DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, true, 10.0f, 0, 1);
+			DrawDebugLine(WorldReference, TraceBegin, TraceEnd, FColor::Red, true, 10.0f, 0, 5);
 		}
 		
 		CurrentTransform = NewTransform;
