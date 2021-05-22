@@ -9,6 +9,7 @@
 
 
 #include "Enemy.h"
+#include "MainCharacter.h"
 #include "WGAGameGameModeBase.h"
 
 // Sets default values
@@ -78,7 +79,9 @@ void ASpawnManager::BeginPlay()
 
 void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
 {
-	if (!bIsActivated && !bWasActivatedInPast)
+	const auto MC = Cast<AMainCharacter>(OtherActor);
+	
+	if (MC != nullptr && !bIsActivated && !bWasActivatedInPast)
 	{
 		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
 		GameMode->SetSpawnManager(this);
@@ -93,7 +96,8 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 			CurrSpawnPointThresh = ThresholdStruct(SpawnPointsThreshes[0], 0, SpawnPointsThreshes.Num()-1);
 			CurrEnemiesKilledThresh = ThresholdStruct(EnemiesKilledThreshes[0], 0, EnemiesKilledThreshes.Num()-1);
 		}
-		
+
+		StateNotifier.AddDynamic(MC, &AMainCharacter::OnActionStateChange);
 		StateNotifier.Broadcast(bIsActivated);
 
 		if (EnemiesLeftToSpawn > 0)

@@ -12,18 +12,6 @@ AMainCharacter::AMainCharacter()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	OnActorBeginOverlap.AddDynamic(this, &AMainCharacter::OnBeginOverlap);
-}
-
-void AMainCharacter::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor)
-{
-	
-	if (OtherActor->GetClass()->IsChildOf(ASpawnManager::StaticClass()))
-	{
-		ASpawnManager* SpawnManager = static_cast<ASpawnManager*>(OtherActor);
-		SpawnManager->StateNotifier.AddDynamic(this, &AMainCharacter::OnActionStateChange);
-	}
 }
 
 float AMainCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator,
