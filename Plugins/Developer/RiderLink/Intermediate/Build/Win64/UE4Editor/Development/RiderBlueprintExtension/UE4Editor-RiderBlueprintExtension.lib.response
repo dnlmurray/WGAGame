@@ -6,8 +6,8 @@
 /NAME:"UE4Editor-RiderBlueprintExtension.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\Games\UnrealEngineProjects\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\UnrealEd\SharedPCH.UnrealEd.RTTI.ShadowErrors.h.obj"
-"D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Module.RiderBlueprintExtension.cpp.obj"
-"D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Default.rc2.res"
-/OUT:"D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\UE4Editor-RiderBlueprintExtension.lib"
+"D:\WGA\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\UnrealEd\SharedPCH.UnrealEd.RTTI.ShadowErrors.h.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Module.RiderBlueprintExtension.cpp.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\Default.rc2.res"
+/OUT:"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderBlueprintExtension\UE4Editor-RiderBlueprintExtension.lib"
 /INCLUDE:IMPLEMENT_MODULE_RiderBlueprintExtension
