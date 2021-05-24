@@ -1,10 +1,14 @@
 ﻿#include "PoisonBomb.h"
 
 
-#include "Enemy.h"
-#include "MainCharacter.h"
+#include "../../MainCharacter/MainCharacter.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+
+UPoisonBomb::UPoisonBomb()
+{
+	PrimaryComponentTick.bCanEverTick = true;
+}
 
 void UPoisonBomb::PlaceProjectile(FTransform Transform)
 {	

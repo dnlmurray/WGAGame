@@ -4,7 +4,7 @@
 
 #include <cassert>
 
-#include "MainCharacter.h"
+#include "MainCharacter/MainCharacter.h"
 #include "Weapon.h"
 #include "WGAGameGameModeBase.h"
 

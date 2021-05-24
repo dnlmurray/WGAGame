@@ -15,11 +15,11 @@
 UCLASS()
 class WGAGAME_API AWGAGameGameModeBase : public AGameModeBase
 {
+public:
 	GENERATED_BODY()
 
 	AWGAGameGameModeBase();
 	
-public:
 	// UFUNCTION(BlueprintImplementableEvent)
 	// void OnPlayerDeath();
 

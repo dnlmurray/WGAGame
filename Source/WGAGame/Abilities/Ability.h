@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 
 #include "AbilitiesState.h"
-#include "BaseConfig.h"
+#include "../Config/BaseConfig.h"
 #include "Components/ActorComponent.h"
 #include "Ability.generated.h"
 

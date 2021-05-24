@@ -6,9 +6,9 @@
 
 
 
-#include "Ability.h"
-#include "MainCharacterConfig.h"
-#include "WGAGameGameModeBase.h"
+#include "../Ability.h"
+#include "../../Config/MainCharacterConfig.h"
+#include "../../WGAGameGameModeBase.h"
 
 #include "MainCharacterAbility.generated.h"
 

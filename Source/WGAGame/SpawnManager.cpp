@@ -9,7 +9,7 @@
 
 
 #include "Enemy.h"
-#include "MainCharacter.h"
+#include "MainCharacter/MainCharacter.h"
 #include "WGAGameGameModeBase.h"
 
 // Sets default values
