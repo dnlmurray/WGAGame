@@ -4,8 +4,8 @@
 
 #include "CoreMinimal.h"
 
-#include "Ability.h"
-#include "GhostEnemyConfig.h"
+#include "../Ability.h"
+#include "../../Config/GhostEnemyConfig.h"
 #include "ThrownProjectile.h"
 
 #include "GhostBomb.generated.h"
@@ -17,6 +17,8 @@ class WGAGAME_API UGhostBomb : public UAbility
 public:
 	// Implements projectile spawning: projectile collision notifies this Component and causes explosion
 	GENERATED_BODY()
+
+	UGhostBomb();
 	
 	UFUNCTION(BlueprintCallable)
     void PlaceProjectile(FTransform Transform);

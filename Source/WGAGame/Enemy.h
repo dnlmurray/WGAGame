@@ -33,7 +33,6 @@ public:
 	
 	void SetSpawnManager(ASpawnManager* SpawnManager);
 
-private:
 	UFUNCTION(BlueprintCallable)
 	void OnEnemyDeath();
 

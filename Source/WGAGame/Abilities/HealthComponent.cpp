@@ -3,7 +3,7 @@
 
 #include "HealthComponent.h"
 
-#include "MainCharacterConfig.h"
+#include "../Config/MainCharacterConfig.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent(): IsDead(false)

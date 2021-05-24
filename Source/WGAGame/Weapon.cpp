@@ -3,8 +3,7 @@
 
 #include "Weapon.h"
 #include "DrawDebugHelpers.h"
-#include "Enemy.h"
-#include "MainCharacter.h"
+#include "MainCharacter/MainCharacter.h"
 #include "WGAGameGameModeBase.h"
 #include "GameFramework/Character.h"
 

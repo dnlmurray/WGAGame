@@ -6,8 +6,8 @@
 
 
 #include "AbilitiesState.h"
-#include "BaseConfig.h"
-#include "WGACharacter.h"
+#include "../Config/BaseConfig.h"
+#include "../WGACharacter.h"
 #include "Components/ActorComponent.h"
 #include "HealthComponent.generated.h"
 

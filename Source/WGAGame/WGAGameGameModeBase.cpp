@@ -3,10 +3,8 @@
 
 #include "WGAGameGameModeBase.h"
 
-#include <string>
 
-
-#include "MainCharacter.h"
+#include "MainCharacter/MainCharacter.h"
 #include "Kismet/GameplayStatics.h"
 
 AWGAGameGameModeBase::AWGAGameGameModeBase():

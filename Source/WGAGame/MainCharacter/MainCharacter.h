@@ -5,8 +5,8 @@
 #include "CoreMinimal.h"
 
 
-#include "MainCharacterConfig.h"
-#include "WGACharacter.h"
+#include "../Config/MainCharacterConfig.h"
+#include "../WGACharacter.h"
 #include "GameFramework/Character.h"
 #include "MainCharacter.generated.h"
 

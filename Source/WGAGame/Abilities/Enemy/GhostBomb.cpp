@@ -1,8 +1,13 @@
 ﻿#include "GhostBomb.h"
 
-#include "MainCharacter.h"
+#include "../../MainCharacter/MainCharacter.h"
 #include "GameFramework/Character.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+
+UGhostBomb::UGhostBomb()
+{
+	PrimaryComponentTick.bCanEverTick = true;
+}
 
 void UGhostBomb::PlaceProjectile(FTransform Transform)
 {	

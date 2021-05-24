@@ -10,11 +10,6 @@ public class WGAGame : ModuleRules
 		
 		//Folders to work with:
 		PrivateIncludePaths.AddRange(new string[] {
-			"WGAGame/Config",
-			"WGAGame/MainCharacter",
-			"WGAGame/Components",
-			"WGAGame/Components/MainCharacter",
-			"WGAGame/Components/Enemy",
 			"WGAGame"
 		});
 		

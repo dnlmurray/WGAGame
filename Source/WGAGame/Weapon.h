@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 
-#include "FaithComponent.h"
+#include "Abilities/FaithComponent.h"
 #include "Components/ActorComponent.h"
 
 #include "Weapon.generated.h"

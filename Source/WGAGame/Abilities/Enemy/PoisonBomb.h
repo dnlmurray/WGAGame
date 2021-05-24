@@ -4,10 +4,8 @@
 
 #include "CoreMinimal.h"
 
-
-
-#include "Ability.h"
-#include "BombEnemyConfig.h"
+#include "../Ability.h"
+#include "../../Config/BombEnemyConfig.h"
 #include "ThrownProjectile.h"
 
 #include "PoisonBomb.generated.h"
@@ -36,6 +34,8 @@ class WGAGAME_API UPoisonBomb : public UAbility
 public:
 	// Implements projectile spawning: projectile collision notifies this Component and causes explosion
 	GENERATED_BODY()
+
+	UPoisonBomb();
 	
 	UFUNCTION(BlueprintCallable)
 	void PlaceProjectile(FTransform Transform);

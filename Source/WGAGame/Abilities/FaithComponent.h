@@ -6,8 +6,8 @@
 
 
 #include "AbilitiesState.h"
-#include "MainCharacterConfig.h"
-#include "WGACharacter.h"
+#include "../Config/MainCharacterConfig.h"
+#include "../WGACharacter.h"
 #include "Components/ActorComponent.h"
 #include "FaithComponent.generated.h"
 
