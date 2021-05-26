@@ -1,5 +1,5 @@
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/null_mutex.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\atomic
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\yvals.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\yvals_core.h
@@ -42,10 +42,10 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\time.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_wtime.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\utility
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/file_helper-inl.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/file_helper.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/file_helper-inl.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/file_helper.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/common.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/tweakme.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\chrono
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\limits
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cfloat
@@ -87,11 +87,11 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\functional
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\tuple
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/fmt.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/core.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\iterator
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vector
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/fmt/bundled/format.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\algorithm
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cerrno
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cmath
@@ -109,22 +109,22 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\mmintrin.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\zmmintrin.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ammintrin.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/os.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/os.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ctime
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\thread
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\process.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vcruntime_startup.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/basic_file_sink-inl.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/basic_file_sink.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/base_sink.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/sink.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/formatter.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details\registry.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/basic_file_sink-inl.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/basic_file_sink.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/base_sink.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/log_msg.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/sink.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/formatter.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/details/synchronous_factory.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog\details\registry.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/cfg/log_levels.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\unordered_map
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xhash
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\list
@@ -134,7 +134,7 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\__msvc_system_error_abi.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xcall_once.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\xerrc.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/base_sink-inl.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/pattern_formatter.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/rotating_file_sink-inl.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/rotating_file_sink.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/base_sink-inl.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/pattern_formatter.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/rotating_file_sink-inl.h
+D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\spdlog\include\spdlog/sinks/rotating_file_sink.h
