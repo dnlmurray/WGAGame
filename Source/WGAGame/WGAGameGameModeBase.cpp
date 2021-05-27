@@ -53,7 +53,8 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	}
 	else
 	{
-		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue() &&
+		if (SpawnManager->CurrEnemiesKilledThresh && SpawnManager->CurrSpawnPointThresh &&
+			GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue() &&
 			SpawnManager->PointsActivated < SpawnManager->TotalPoints)
 		{
 			const int OldPointsNum = SpawnManager->PointsActivated;
