@@ -115,10 +115,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "MediaPlayerEditor",
-			"Enabled": false
-		},
-		{
 			"Name": "ProxyLODPlugin",
 			"Enabled": false
 		},
@@ -175,10 +171,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "WmfMedia",
-			"Enabled": false
-		},
-		{
 			"Name": "TcpMessaging",
 			"Enabled": false
 		},
@@ -204,10 +196,6 @@
 		},
 		{
 			"Name": "AppleMoviePlayer",
-			"Enabled": false
-		},
-		{
-			"Name": "WindowsMoviePlayer",
 			"Enabled": false
 		},
 		{
@@ -313,10 +301,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "MediaCompositing",
-			"Enabled": false
-		},
-		{
 			"Name": "EditableMesh",
 			"Enabled": false
 		},
@@ -374,6 +358,14 @@
 		},
 		{
 			"Name": "PerformanceMonitor",
+			"Enabled": true
+		},
+		{
+			"Name": "MfMedia",
+			"Enabled": true
+		},
+		{
+			"Name": "MediaFrameworkUtilities",
 			"Enabled": true
 		}
 	],
