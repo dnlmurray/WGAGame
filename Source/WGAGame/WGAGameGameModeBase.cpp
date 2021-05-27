@@ -93,7 +93,7 @@ void AWGAGameGameModeBase::LoadCheckpoint()
 	AMainCharacter* MC = StaticCast<AMainCharacter*>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	MC->ResetPlayer();
 	MC->SetActorLocation(CheckpointSpawnLocation);
-
+	
 
 }
 
