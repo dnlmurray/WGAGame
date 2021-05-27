@@ -43,4 +43,7 @@ protected:
 public:
 	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly)
 	UMainCharacterConfig* ConfigInst;
+	
+	UPROPERTY(BlueprintReadWrite)
+	bool bInCombat;
 };
