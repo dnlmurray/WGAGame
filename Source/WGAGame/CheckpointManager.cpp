@@ -21,9 +21,13 @@ void ACheckpointManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* Other
 	if (!bIsActivated && OtherActor->GetClass()->IsChildOf(AMainCharacter::StaticClass()))
 	{
 		AMainCharacter* MC = static_cast<AMainCharacter*>(OtherActor);
-		AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
-		GameMode->SaveCheckpoint(MC->GetActorLocation());
-		bIsActivated = true;
+		
+		if (!MC->bInCombat)
+		{
+			AWGAGameGameModeBase* GameMode = GetWorld()->GetAuthGameMode<AWGAGameGameModeBase>();
+			GameMode->SaveCheckpoint(MC->GetActorLocation());
+			bIsActivated = true;
+		}
 	}
 }
 

@@ -124,4 +124,6 @@ public:
 	bool bWasActivatedInPast;
 
 	bool bUseSpawnThreshes;
+
+	bool bWasSubscribed;
 };

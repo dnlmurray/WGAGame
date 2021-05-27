@@ -38,9 +38,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category="ActorSpawning")
 	TSubclassOf<AAbilityVisual> Visual;
 
-protected:
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite)
 	UBaseConfig const* ConfigurationData;
+	
+protected:
 	
 	UPROPERTY()
 	UAbilitiesState* AbilitiesState;

@@ -20,6 +20,7 @@ ASpawnManager::ASpawnManager()
 , EnemiesLeftToSpawn(0)
 , bWasActivatedInPast(false)
 , bUseSpawnThreshes(false)
+, bWasSubscribed(false)
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -97,7 +98,11 @@ void ASpawnManager::OnBeginOverlap(AActor* MyOverlappedActor, AActor* OtherActor
 			CurrEnemiesKilledThresh = ThresholdStruct(EnemiesKilledThreshes[0], 0, EnemiesKilledThreshes.Num()-1);
 		}
 
-		StateNotifier.AddDynamic(MC, &AMainCharacter::OnActionStateChange);
+		if (!bWasSubscribed)
+		{
+			StateNotifier.AddDynamic(MC, &AMainCharacter::OnActionStateChange);
+			bWasSubscribed = true;
+		}
 		StateNotifier.Broadcast(bIsActivated);
 
 		if (EnemiesLeftToSpawn > 0)
@@ -210,11 +215,12 @@ void ASpawnManager::SpawnEnemy(UClass* EnemyClass, AActor* Point)
 
 void ASpawnManager::Reset()
 {
-	EnemiesLeftToSpawn = 0;
+	EnemiesLeftToSpawn = TotalEnemies;
 	bIsActivated = false;
 	bWasActivatedInPast = false;
 	ResetNotifier.Broadcast();
 	StateNotifier.Broadcast(bIsActivated);
+	UpdateEvilForce();
 }
 
 void ASpawnManager::SpawnOnRandomPoint()

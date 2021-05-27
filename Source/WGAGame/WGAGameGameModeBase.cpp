@@ -53,7 +53,8 @@ void AWGAGameGameModeBase::OnEnemyKill()
 	}
 	else
 	{
-		if (GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue() &&
+		if (SpawnManager->CurrEnemiesKilledThresh && SpawnManager->CurrSpawnPointThresh &&
+			GetLocationEnemiesKilled() >= SpawnManager->CurrEnemiesKilledThresh->GetValue() &&
 			SpawnManager->PointsActivated < SpawnManager->TotalPoints)
 		{
 			const int OldPointsNum = SpawnManager->PointsActivated;
@@ -93,7 +94,7 @@ void AWGAGameGameModeBase::LoadCheckpoint()
 	AMainCharacter* MC = StaticCast<AMainCharacter*>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	MC->ResetPlayer();
 	MC->SetActorLocation(CheckpointSpawnLocation);
-
+	
 
 }
 
