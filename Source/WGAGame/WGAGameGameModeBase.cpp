@@ -72,8 +72,8 @@ void AWGAGameGameModeBase::OnEnemyKill()
 		}
 	}
 
-	GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Red,
-		FString::Printf(TEXT("Killed enemies: %d"), GetLocationEnemiesKilled()));
+	// GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Red,
+	//	FString::Printf(TEXT("Killed enemies: %d"), GetLocationEnemiesKilled()));
 
 	if (GetLocationEnemiesKilled() == SpawnManager->TotalEnemies)
 	{
