@@ -29,13 +29,19 @@ void UEvilForce::IncreaseEvilForce(float percent)
 	Percent = FMath::Clamp(Percent + percent, MinPercent, MaxPercent);
 }
 
+void UEvilForce::Reset()
+{
+	Percent = MinPercent;
+	
+}
+
 // Called when the game starts
 void UEvilForce::BeginPlay()
 {
 	Super::BeginPlay();
 
 	Percent = MinPercent;
-	
+	bEvilForceIsIncreasing = false;
 }
 
 

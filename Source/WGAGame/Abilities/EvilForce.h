@@ -27,6 +27,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void IncreaseEvilForce(float percent);
+
+	UFUNCTION(BlueprintCallable)
+	void Reset();
 	
 protected:
 	// Called when the game starts

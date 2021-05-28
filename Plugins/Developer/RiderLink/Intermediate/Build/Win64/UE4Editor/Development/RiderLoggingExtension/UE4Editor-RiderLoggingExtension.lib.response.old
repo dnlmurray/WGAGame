@@ -6,8 +6,8 @@
 /NAME:"UE4Editor-RiderLoggingExtension.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\Unreal Projects\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\Core\SharedPCH.Core.RTTI.ShadowErrors.h.obj"
-"D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\Module.RiderLoggingExtension.cpp.obj"
-"D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\Default.rc2.res"
-/OUT:"D:\Unreal Projects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\UE4Editor-RiderLoggingExtension.lib"
+"D:\WGA\WGAGame\Intermediate\Build\Win64\WGAGameEditor\Development\Core\SharedPCH.Core.RTTI.ShadowErrors.h.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\Module.RiderLoggingExtension.cpp.obj"
+"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\Default.rc2.res"
+/OUT:"D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RiderLoggingExtension\UE4Editor-RiderLoggingExtension.lib"
 /INCLUDE:IMPLEMENT_MODULE_RiderLoggingExtension

@@ -1,6 +1,6 @@
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Intermediate\Build\Win64\UE4Editor\Development\RD\Definitions.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\lifetime\LifetimeImpl.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\src\main\std/hash.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\functional
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\yvals_core.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vcruntime.h
@@ -95,23 +95,23 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\process.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\corecrt_startup.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\math.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vcruntime_startup.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\thirdparty.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_set.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\deque
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\vector
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl\ordered_hash.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\algorithm
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cmath
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\iterator
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\ordered-map\include\tsl/ordered_map.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\optional\tl\optional.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark/variant.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\config.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\in_place.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\variant\include\mpark\lib.hpp
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\thirdparty\string-view-lite\include\nonstd/string_view.hpp
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cassert
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\assert.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\ostream
@@ -128,4 +128,4 @@ C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\ctype.h
 C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt\locale.h
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\string
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\INCLUDE\cctype
-D:\WGA\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
+D:\Games\UnrealEngineProjects\WGAGame\Plugins\Developer\RiderLink\Source\RD\src\rd_core_cpp\rd_core_export.h
